@@ -1,0 +1,102 @@
+.btnStyle {
+	background-color: #222831;
+	color: #eeeeee;
+	border-style: solid;
+	border-width: medium;
+}
+
+img {
+	width: 100%;
+}
+
+@media (min-width: 960px) {
+	.col-md-3 .well {
+		height: 390px;
+	}
+
+	.col-md-3 img {
+		height: 240px;
+	}
+}
+
+.poster {
+	height: 100px !important;
+}
+
+body {
+	background-color: black !important;
+}
+
+.darkbg {
+	background-color: black !important;
+}
+
+.whiteText {
+	color: white;
+}
+
+.modal {
+	display: none; /* hidden by default */
+	position: fixed; /* stay in place */
+	z-index: 1; /* sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* full width */
+	height: 100%; /* full height */
+	overflow: auto; /* enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* black w/ opacity */
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* width of modal */
+}
+
+.modal-buttons {
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* Button styles */
+button {
+	background-color: #4caf50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+/* Cancel button */
+#modal-cancel-button {
+	background-color: #f44336;
+}
+
+/* Ok button */
+#modal-ok-button {
+	background-color: #4caf50;
+}
+
+/* Close button */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
