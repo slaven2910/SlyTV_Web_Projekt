@@ -33,14 +33,20 @@
                                     </div>
                                 <?php } ?>
 
+                                <?php if (isset($_GET["success"])) { ?>
+                                    <div class="alert alert-success" role="alert">
+                                        <?php echo $_GET["success"]; ?>
+                                    </div>
+                                <?php } ?>
+
                                 <div class="form-outline form-white mb-4">
-                                    <input type="email" id="typeEmailX" name="eMail" class="form-control form-control-lg" />
-                                    <label class="form-label" for="typeEmailX">Email</label>
+                                    <input type="email" name="eMail" class="form-control form-control-lg" />
+                                    <label class="form-label" for="eMail">Email</label>
                                 </div>
 
                                 <div class="form-outline form-white mb-4">
-                                    <input type="password" id="typePasswordX" name="password" class="form-control form-control-lg" />
-                                    <label class="form-label" for="typePasswordX">Password</label>
+                                    <input type="password" name="password" class="form-control form-control-lg" />
+                                    <label class="form-label" for="password">Password</label>
                                 </div>
 
                                 <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="passwordReset.php">Forgot password?</a></p>
