@@ -33,12 +33,15 @@ foreach($queryResult as $row){
   $plot = $row['plot'];
   $poster = $row['image'];
 
+  $temp = "images\{$poster}";
+  //SO geht es ohne Probelem aber aus dem $poster kommt was falsches raus
+
   echo "
   <div class='row'>
       <h2 class='text-light mx-auto d-block'>$title</h2>
   </div>
   <div class='row'>
-      <img src='./png/maxresdefault.jpg' class='thumbnail mx-auto d-block' style='height:400px;width:400px;'>
+      <img src='$temp' class='thumbnail mx-auto d-block' style='height:400px;width:400px;'>
   </div>
 <div class='row'>
       <h3 class='mx-auto d-block text-light'>Plot:</h3>

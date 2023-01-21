@@ -15,7 +15,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 }
 
 // Connect to the database
-$pdo = new PDO('pgsql:host=localhost, dbname=SlyTV', 'postgres', 'aspire938');
+$pdo = new PDO('pgsql:host=localhost, dbname=SlyTV', 'postgres', '1234');
 
 // Check if the form has been submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

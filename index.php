@@ -45,8 +45,7 @@ foreach($queryResult as $row){
   <div>
   <h5 class='whiteText row justify-content-center'>${title}</h5>
   </div>
-      <img src='./png/maxresdefault.png'>
-    
+      <img src='$poster' style='height: 14rem; object-fit: cover;'>
       <a class='btnStylez' id='toMovieDetailsButton' href='movieDetails.php?movie_id=$movieId'>Movie Details</a>
   </div>
 </div>";

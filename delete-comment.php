@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO('pgsql:host=localhost; dbname=SlyTV', 'postgres', 'aspire938');
+$pdo = new PDO('pgsql:host=localhost; dbname=SlyTV', 'postgres', '1234');
 /* 
 // Check if the ID of the comment to be deleted has been sent in the request
 if (isset($_POST['id'])) {
