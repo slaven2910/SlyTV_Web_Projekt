@@ -17,7 +17,7 @@ if (!$dbConn) {
 
 function getMovies($dbConn){
   try{
-      $showMoviesQuery = "select * from public.\"Movies\"";
+      $showMoviesQuery = "SELECT * FROM public.\"Movies\"";
       $showMoviesResult = pg_query($dbConn, $showMoviesQuery);
       $movies = pg_fetch_all($showMoviesResult);
       return $movies;
@@ -30,7 +30,7 @@ function getMovies($dbConn){
 
 function getMovie($dbConn,$id) {
   try {
-      $movieQuery = "SELECT * from public.\"Movies\" where id=$id";
+      $movieQuery = "SELECT * FROM public.\"Movies\" WHERE id=$id";
       $queryResult = pg_query($dbConn, $movieQuery);
       $movie = pg_fetch_assoc($queryResult);
       return $movie;
@@ -75,11 +75,11 @@ function getComments($dbConn, $movie_id) {
 
 function getMovieRatingAvg($dbConn, $movie_id){
   try{
-    $ratingQuery = "SELECT AVG(rating) as avg_rating FROM public.\"movie_ratings\" WHERE movie_id = $movie_id";
+    $ratingQuery = "SELECT AVG(rating) AS avg_rating FROM public.\"movie_ratings\" WHERE movie_id = $movie_id";
     $queryResult = pg_query($dbConn, $ratingQuery);
     $rating = pg_fetch_assoc($queryResult);
     return $rating;
-  } catch(Excepton $e) {
+  } catch(Exception $e) {
     echo $e->getMessage();
   }
 }
@@ -91,7 +91,7 @@ function getUserRatingForMovie($dbConn, $movieId, $user_id) {
     $query = "SELECT * FROM public.\"movie_ratings\" WHERE movie_id='$movieId' AND user_id='$user_id'";
     $queryResult = pg_query($dbConn, $query);
     return pg_fetch_assoc($queryResult);
-  } catch(Excepton $e) {
+  } catch(Exception $e) {
     echo $e->getMessage();
   }
   
@@ -134,7 +134,7 @@ function deleteComment($dbConn, $comment_id, $user_id) {
     $deleteQuery = "DELETE FROM public.\"movie_comments\" WHERE id = '$comment_id' AND user_id = '$user_id'";
     $deleteResult = pg_query($dbConn, $deleteQuery);
     return $deleteResult;
-  } catch(Excepton $e) {
+  } catch(Exception $e) {
     echo $e->getMessage();
   }
 }
@@ -162,7 +162,7 @@ function updateComment($dbConn, $comment_id, $newComment, $user_id) {
     $updateQuery = "UPDATE public.\"movie_comments\" SET comment='$newComment', created_at= now() WHERE id = $comment_id AND user_id = '$user_id'";
     $updateResult = pg_query($dbConn, $updateQuery);
     return $updateResult;
-  } catch(Excepton $e) {
+  } catch(Exception $e) {
     echo $e->getMessage();
   }
 }

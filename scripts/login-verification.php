@@ -27,10 +27,10 @@ if (isset($_POST["eMail"]) && isset($_POST["password"])) {
     $pwd = validate($_POST["password"]);
   
     if (empty($eMail)) {
-        header("Location: login.php?error=E-Mail is required");
+        header("Location: ../login.php?error=E-Mail is required");
         exit();
     } else if (empty($pwd)) {
-        header("Location: login.php?error=Password is required");
+        header("Location: ../login.php?error=Password is required");
         exit();
     } else {
         $query = "SELECT * FROM public.\"Users\" WHERE email='$eMail'";
@@ -52,16 +52,16 @@ if (isset($_POST["eMail"]) && isset($_POST["password"])) {
                 header("Location: ../index.php");
                 exit();
             } else {
-                header("Location: login.php?error=Incorrect E-Mail or password");
+                header("Location: ../login.php?error=Incorrect E-Mail or password");
                 exit();
             }
         } else {
-            header("Location: login.php?error=Either E-Mail or password is incorrect");
+            header("Location: ../login.php?error=Either E-Mail or password is incorrect");
             exit();
         }
     }
   } else {
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit();
   
 }

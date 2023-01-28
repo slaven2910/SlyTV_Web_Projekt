@@ -12,8 +12,9 @@
 
 <body class="site-background">
     <!-- Code snippet from: https://mdbootstrap.com/docs/standard/extended/login/#!  -->
-    <div class="container-fluid py-5 h-100 ">
-    <?php include('./components/navbar.php'); ?>
+    <div class="container-fluid">
+        <?php include('./components/navbar.php'); ?>
+
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card" style="border-radius: 1rem;">
@@ -23,7 +24,7 @@
 
                             <form action="./scripts/login-verification.php" method="POST">
                                 <h2 class="textOnCard fw-bold mb-2 text-uppercase">Login</h2>
-                                <p class="textOnCard  mb-5">Please enter your login and password!</p>
+                                <p class="textOnCard mb-5">Please enter your login and password!</p>
 
                                 <?php if (isset($_GET["error"])) { ?>
                                     <!-- alert from https://getbootstrap.com/docs/5.2/components/alerts/ -->
@@ -42,7 +43,7 @@
                                     <label class="form-label textOnCard" for="typePasswordX">Password</label>
                                 </div>
 
-                                <p class="small mb-5 pb-lg-2 "><a  href="passwordReset.php">Forgot password?</a></p>
+                                <p class="small mb-5 pb-lg-2 "><a href="passwordReset.php">Forgot password?</a></p>
 
                                 <button type="submit" class="btn btn-outline-dark btn-lg px-5 w-100 ">Login</button>
                             </form>
@@ -56,7 +57,7 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 </body>
 
 </html>
