@@ -167,9 +167,11 @@ small.text-right {
 	font-size: 1.5rem;
 }
 
-.nav-link:hover {
-	text-decoration: underline;
-	transition: all 0.2s ease;
+.nav-item:hover {
+	text-decoration: none;
+	border-bottom: 2px solid;
+	padding-bottom: 2px;
+	transition: all 0.1s ease;
 }
 
 .content-wrapper {
@@ -180,11 +182,28 @@ small.text-right {
 .add-comment-textarea {
 	width: 50%;
 }
+.movie-infos {
+	margin-left: 100px;
+}
+
+.movie-infos p {
+	font-size: large;
+}
 
 .search-bar {
 	width: 400px;
-	margin-left: 150px;
 }
+
+.search-bar-button {
+	margin-right: 120px;
+}
+
+@media (max-width: 1200px) {
+	.search-bar {
+		width: 200px;
+	}
+}
+
 @media (max-width: 768px) {
 	.search-bar {
 		width: 200px; /* or any other width you want */
@@ -195,10 +214,48 @@ small.text-right {
 	.search-bar {
 		margin-left: auto;
 	}
+	.search-bar-button {
+		margin-right: 0px;
+	}
+}
+@media (max-width: 375px) {
+	.search-bar {
+		margin-top: 20px;
+		margin-left: auto;
+		width: 200px;
+	}
+	.search-bar-button {
+		margin-top: 20px;
+		margin-right: 0px;
+	}
+	.poster {
+		height: 400px !important;
+		width: 300px !important;
+	}
+	.movie-infos {
+		margin-left: 0px;
+	}
 }
 
 .iconClass {
 	border-radius: 0.25rem;
+}
+
+@media (max-width: 992px) {
+	.dropdown-toggle {
+		text-align: right;
+	}
+	.dropdown-menu {
+		text-align: end;
+		width: 20%;
+		float: right;
+	}
+	.navbar-nav {
+		float: right;
+	}
+	.search-bar {
+		width: 400px;
+	}
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -218,10 +275,7 @@ small.text-right {
 	right: 30px;
 }
 
-.movie-infos {
-	margin-left: 100px;
-}
-
-.movie-infos p {
-	font-size: large;
+.dropdown-menu {
+	top: 70%;
+	right: 2rem;
 }

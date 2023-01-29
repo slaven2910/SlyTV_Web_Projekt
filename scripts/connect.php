@@ -2,11 +2,13 @@
 include 'db-credientials.php';
 session_start();
 
+
 // Datenbankverbindung aufbauen
 
 $connStr = "host=$host port=$port dbname=$db user=$user password=$pw";
 
 $dbConn = pg_connect($connStr);
+date_default_timezone_set('Europe/Berlin');
 
 if (!$dbConn) {
   echo "Ein Fehler ist aufgetreten.\n";
@@ -62,7 +64,7 @@ function getComments($dbConn, $movie_id) {
       $commentsQuery = "SELECT u.username, mc.comment, mc.created_at, mc.id, mc.user_id
       FROM public.\"Users\" u
       INNER JOIN public.\"movie_comments\" mc ON u.user_id = mc.user_id
-      WHERE mc.movie_id = $movie_id";
+      WHERE mc.movie_id = $movie_id ORDER BY mc.created_at DESC";
       $queryResult = pg_query($dbConn, $commentsQuery);
       $comments = pg_fetch_all($queryResult);
       return $comments;
@@ -117,14 +119,13 @@ if (isset($_POST['rate']) && isset($_POST['movie_id']) && isset($_POST['user_id'
       }
   }
 
-  if (!empty($existingRating)) {
-      $update = "UPDATE public.\"movie_ratings\" SET rating='$rate' WHERE movie_id='$movie_id' AND user_id='$user_id'";
-      $updateResult = pg_query($dbConn, $update);
-  } else {
+  if (empty($existingRating)) {
       $insert = "INSERT INTO public.\"movie_ratings\"(rating, movie_id, user_id) VALUES('$rate', '$movie_id', '$user_id')";
       $insertResult = pg_query($dbConn, $insert);
+  } else {
+    $update = "UPDATE public.\"movie_ratings\" SET rating='$rate' WHERE movie_id='$movie_id' AND user_id='$user_id'";
+    $updateResult = pg_query($dbConn, $update);
   }
-  //...
 }
 
 //delete a comment

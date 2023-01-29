@@ -1,17 +1,25 @@
 <?php 
-/*   if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true){
-    // user is logged in
-    $current_user = $_SESSION["user_id"];
-  } else {
+// Start output buffering
+ob_start();
+
+// Check if user is logged in
+if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] != true){
     // user is not logged in
     // redirect user to login page
-    header("Location: login.php");
+    header("Location: /login.php");
     exit;
-  } */
-  $user_id = $_SESSION["user_id"];
-  $movie_id = $_GET["movie_id"];
-  $existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id);
+}
+
+// Get user_id and movie_id
+$user_id = $_SESSION["user_id"];
+$movie_id = $_GET["movie_id"];
+$existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id);
+// Flush output buffer
+ob_end_flush();
 ?>
+
+<!-- Rest of add-review.php file -->
+
 
 <section class="text-center">
   <h3 >Reviews:</h3>
@@ -50,4 +58,3 @@
   </div>
 </form>
 </section>
-

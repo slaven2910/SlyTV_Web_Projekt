@@ -1,5 +1,22 @@
 <?php
 include('./scripts/connect.php');
+ob_start();
+
+// Check if user is logged in
+if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] != true){
+    // user is not logged in
+    // redirect user to login page
+    header("Location: login.php?message=login_required_to_post_reviews");
+    exit;
+}
+
+// Get user_id and movie_id
+$user_id = $_SESSION["user_id"];
+$movie_id = $_GET["movie_id"];
+$existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id);
+
+// Flush output buffer
+ob_end_flush();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +32,8 @@ include('./scripts/connect.php');
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
-
 <body class="site-background">
-    <div class="container-fluid">
+<div class="container-fluid">
 
         <!-- Navbar -->
 

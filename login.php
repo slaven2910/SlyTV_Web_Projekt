@@ -21,7 +21,17 @@
                     <div class="card-body p-5 text-center ">
 
                         <div class="mb-md-5 mt-md-4 pb-5">
-
+                            <?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){
+                                    echo "
+                                    <div class='alert alert-warning alert-dismissible fade show d-flex justify-content-between' role='alert'>
+                                        <p class='text-center mx-auto my-auto'> You need to be logged in order to view or post reviews. </p>
+                                        <button type='button' class='close ' data-dismiss='alert' aria-label='Close'>
+                                            <span class='float-right' aria-hidden='true'>&times;</span>
+                                        </button>
+                                    </div>
+                                    ";
+                                    }
+                            ?>
                             <form action="./scripts/login-verification.php" method="POST">
                                 <h2 class="textOnCard fw-bold mb-2 text-uppercase">Login</h2>
                                 <p class="textOnCard mb-5">Please enter your login and password!</p>
