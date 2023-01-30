@@ -1,0 +1,281 @@
+.site-background {
+	background-color: #c9c9c92e;
+}
+
+.poster {
+	height: 500px !important;
+	width: 400px !important;
+}
+.well h2,
+.well h5,
+.well p {
+	margin: 10px 0;
+}
+
+/* Button styles */
+/* button {
+	background-color: #4caf50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+} */
+
+button:hover {
+	opacity: 0.8;
+}
+
+/* movie-card */
+
+.fixed-height {
+	height: 500px;
+	overflow: hidden;
+}
+.truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.card-footer {
+	background-color: transparent !important;
+	padding: 0 !important;
+	border: none !important;
+}
+
+@media (max-width: 575.98px) {
+	.card {
+		max-width: 100%;
+	}
+}
+
+/* .btn {
+	background-color: #505a5b;
+} */
+
+/* star review */
+.rate {
+	float: left;
+	height: 46px;
+	padding: 0 10px;
+}
+.rate:not(:checked) > input {
+	position: absolute;
+	top: -9999px;
+}
+.rate:not(:checked) > label {
+	float: right;
+	width: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 30px;
+	color: #ccc;
+}
+.rate:not(:checked) > label:before {
+	content: "★ ";
+}
+.rate > input:checked ~ label {
+	color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+	color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+	color: #c59b08;
+}
+
+/* comment date */
+
+small.text-right {
+	position: absolute;
+	right: 0;
+	font-size: 12px;
+}
+/* https://dev.to/webdeasy/top-20-css-buttons-animations-f41 button animation */
+/* .button-wrapper {
+	transform: translate(-50%, -50%);
+} */
+
+.button-wrapper a {
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	font-family: sans-serif;
+	text-decoration: none;
+	color: white;
+	border: 2px solid #333;
+	letter-spacing: 2px;
+	text-align: center;
+	position: relative;
+	transition: all 0.35s;
+}
+
+.button-wrapper a span {
+	position: relative;
+	z-index: 2;
+}
+
+.button-wrapper a:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: white;
+	transition: all 0.35s;
+}
+
+.button-wrapper a:hover {
+	color: black;
+}
+
+.button-wrapper a:hover:after {
+	width: 100%;
+}
+.bg-primary {
+	background-color: black !important;
+}
+
+.uppercase {
+	text-transform: capitalize;
+}
+
+.border-radius {
+	border-radius: 10px;
+}
+
+.movie-image-placeholder {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 280px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.nav-link {
+	color: black !important	;
+	font-size: 1.5rem;
+}
+
+.nav-item:hover {
+	text-decoration: none;
+	border-bottom: 2px solid;
+	padding-bottom: 2px;
+	transition: all 0.1s ease;
+}
+
+.content-wrapper {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.add-comment-textarea {
+	width: 50%;
+}
+.movie-infos {
+	margin-left: 100px;
+}
+
+.movie-infos p {
+	font-size: large;
+}
+
+.search-bar {
+	width: 400px;
+}
+
+.search-bar-button {
+	margin-right: 120px;
+}
+
+@media (max-width: 1200px) {
+	.search-bar {
+		width: 200px;
+	}
+}
+
+@media (max-width: 768px) {
+	.search-bar {
+		width: 200px; /* or any other width you want */
+	}
+}
+
+@media (max-width: 1095px) {
+	.search-bar {
+		margin-left: auto;
+	}
+	.search-bar-button {
+		margin-right: 0px;
+	}
+}
+@media (max-width: 375px) {
+	.search-bar {
+		margin-top: 20px;
+		margin-left: auto;
+		width: 200px;
+	}
+	.search-bar-button {
+		margin-top: 20px;
+		margin-right: 0px;
+	}
+	.poster {
+		height: 400px !important;
+		width: 300px !important;
+	}
+	.movie-infos {
+		margin-left: 0px;
+	}
+}
+
+.iconClass {
+	border-radius: 0.25rem;
+}
+
+@media (max-width: 992px) {
+	.dropdown-toggle {
+		text-align: right;
+	}
+	.dropdown-menu {
+		text-align: end;
+		width: 20%;
+		float: right;
+	}
+	.navbar-nav {
+		float: right;
+	}
+	.search-bar {
+		width: 400px;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	/* the class you gave of the bars icon ↑ */
+	.iconClass {
+		display: none;
+	}
+	/* the bootstrap toogler button class */
+	.navbar-toggler {
+		display: none;
+	}
+}
+
+.terms-checkbox {
+	position: absolute;
+	right: 30px;
+}
+
+.dropdown-menu {
+	top: 70%;
+	right: 2rem;
+}
