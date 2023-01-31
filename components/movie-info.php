@@ -17,10 +17,10 @@ echo "
 <section class='mb-5'>
 <div class='well'>
   <div class='row justify-content-center'>
-    <div class='col-md-4'>
+    <div class='col-lg-4'>
         <img class='thumbnail d-block poster' src='./assets/images/moviePlaceholder.jpg' alt='Card image cap'>
     </div>
-    <div class='col-md-4 movie-infos align-self-center'>
+    <div class='col-lg-4 movie-infos align-self-center'>
         <p>Title: <strong>$title</strong></p>
         <p>Rating: <strong>$ratingAvg</strong> </p>
         <p>Publishing Year: <strong>$publishing_year</strong></p>

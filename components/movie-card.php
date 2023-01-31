@@ -9,7 +9,7 @@
     </div>
     <div class="card-footer text-center mb-4">
       <div class="button-wrapper">
-      <a class="btn bg-primary uppercase" href="movie-reviews.php?movie_id=<?php echo $movieId; ?>"> <span>Add a review</span></a>
+      <a class="btn btn-sm bg-primary uppercase" href="movie-reviews.php?movie_id=<?php echo $movieId; ?>"> <span class="add-review-button">Add a review</span></a>
       </div>
     </div>
   </div>

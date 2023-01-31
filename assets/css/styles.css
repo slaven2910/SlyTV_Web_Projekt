@@ -12,16 +12,6 @@
 	margin: 10px 0;
 }
 
-/* Button styles */
-/* button {
-	background-color: #4caf50;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	cursor: pointer;
-	width: 100%;
-} */
 
 button:hover {
 	opacity: 0.8;
@@ -57,6 +47,7 @@ button:hover {
 /* star review */
 .rate {
 	float: left;
+	width: 170px;
 	height: 46px;
 	padding: 0 10px;
 }
@@ -99,13 +90,9 @@ small.text-right {
 	font-size: 12px;
 }
 /* https://dev.to/webdeasy/top-20-css-buttons-animations-f41 button animation */
-/* .button-wrapper {
-	transform: translate(-50%, -50%);
-} */
 
 .button-wrapper a {
 	width: 200px;
-	height: 40px;
 	line-height: 40px;
 	font-size: 18px;
 	font-family: sans-serif;
@@ -195,10 +182,10 @@ small.text-right {
 }
 
 .search-bar-button {
-	margin-right: 120px;
+	margin-right: 200px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1288px) {
 	.search-bar {
 		width: 200px;
 	}
@@ -256,6 +243,9 @@ small.text-right {
 	.search-bar {
 		width: 400px;
 	}
+	.movie-infos{
+		margin-left: 0px;
+	}
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -270,6 +260,8 @@ small.text-right {
 	}
 }
 
+
+
 .terms-checkbox {
 	position: absolute;
 	right: 30px;
@@ -279,3 +271,14 @@ small.text-right {
 	top: 70%;
 	right: 2rem;
 }
+
+.add-review-button{
+	margin-bottom: 10px;
+}
+
+.all-comments{
+	height: 490px;
+	overflow-y: scroll;
+}
+
+

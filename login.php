@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
+<?php include('./components/header.php'); ?>
 
 <body class="site-background">
     <!-- Code snippet from: https://mdbootstrap.com/docs/standard/extended/login/#!  -->
@@ -22,17 +15,17 @@
 
                         <div class="mb-md-5 mt-md-4 pb-5">
                             <?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){
+                                $movie_id = $_GET["movie_id"];
+                                $_SESSION["redirect_to_movie"] = $movie_id;
                                     echo "
-                                    <div class='alert alert-warning alert-dismissible fade show d-flex justify-content-between' role='alert'>
-                                        <p class='text-center mx-auto my-auto'> You need to be logged in order to view or post reviews. </p>
-                                        <button type='button' class='close ' data-dismiss='alert' aria-label='Close'>
-                                            <span class='float-right' aria-hidden='true'>&times;</span>
-                                        </button>
+                                    <div class='alert alert-warning alert-dismissible fade show text-center mx-auto mb-3' role='alert'>
+                                        You need to be logged in order to view or post reviews.
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                                     </div>
                                     ";
                                     }
                             ?>
-                            <form action="./scripts/login-verification.php" method="POST">
+                            <form action="./scripts/login-verification.php?movie_id=<?php echo $movie_id ?>" method="POST">
                                 <h2 class="textOnCard fw-bold mb-2 text-uppercase">Login</h2>
                                 <p class="textOnCard mb-5">Please enter your login and password!</p>
 
@@ -68,6 +61,7 @@
             </div>
         </div>
     </div>
+    <?php include './components/footer.php'; ?>
 </body>
 
 </html>

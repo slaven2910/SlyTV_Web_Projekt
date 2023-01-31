@@ -3,8 +3,6 @@
 
 <?php
 
-
-
 if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true){
     // user is logged in
     $current_user = $_SESSION["user_id"];
@@ -40,8 +38,8 @@ foreach($comments as $row){
         href="#" 
         class="edit-button btn btn-success"
         name='edit-button' 
-        data-toggle="modal" 
-        data-target="#edit-comment-modal" 
+        data-bs-toggle="modal" 
+        data-bs-target="#edit-comment-modal" 
         data-comment-id="<?php echo $comment_id; ?>" 
         data-movie-id="<?php echo $movie_id; ?>" 
         data-comment-text="<?php echo $comment; ?>">
@@ -64,16 +62,12 @@ foreach($comments as $row){
 <div class="modal fade" id="edit-comment-modal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="row">
-        <div class="col-9">
+    <div class="modal-header">
           <h5 class="text-left pt-2 pl-3">Edit your comment:</h5>
-        </div>
-        <div class="col-3">
-          <button type="button" class="close text-right px-2" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close justify-content-end" data-bs-dismiss="modal" aria-label="Close">
           </button>
-        </div>
       </div>
+      
       <div class="modal-body">
         <form id="edit-comment-form" method='post'>
           <div class='d-flex flex-column'>
@@ -84,7 +78,7 @@ foreach($comments as $row){
             <small class='text-left'><?php echo "Posted at: $created_at "?></small>   
             <div class="row pt-3">
               <div class="col-6">          
-                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
               </div>
               <div class="col-6 d-flex justify-content-end">          
                 <button type="submit" id="update-button" name="update" class="btn btn-dark">Save changes</button>
@@ -110,4 +104,5 @@ foreach($comments as $row){
 
 
 <?php } ?>
+</div>
  </section>
