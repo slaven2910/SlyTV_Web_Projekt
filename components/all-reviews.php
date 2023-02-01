@@ -29,7 +29,7 @@ foreach($comments as $row){
     <li class='list-group-item d-flex justify-content-between align-items-center'>
       <div class='d-flex flex-column'>
         <small class='text-left'>- <?php echo $user_name ?></small>
-        <p class='text-left comm' style="height:auto;" id="comment-text"><?php echo $comment ?></p>
+        <p class='text-left comment-multiple-lines' style="height:auto;" id="comment-text"><?php echo $comment ?></p>
         <small class='text-left'><?php echo "Posted at: $created_at "?></small>
       </div>
       <div class='d-flex'>
