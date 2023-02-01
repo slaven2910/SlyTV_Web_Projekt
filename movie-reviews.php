@@ -33,16 +33,20 @@ ob_end_flush();
 
         <!-- Movie Info -->
         <div class="container">
-
+        <div class='sticky-top site-background' >
             <?php include('./components/movie-info.php');
+            
             // FIXME: fixed erstmal den Fehler. Ihr könnt entscheiden, ob ihr das so lassen wollt
             if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] == false) {
                 echo 'You must be logged in to make reviews and comments --> <a href="login.php">Login</a>';
             } else {
-                echo " <div class='all-comments'>";
+                echo "            
+                
+                ";
                 include('./components/add-review.php');
-                include('./components/all-reviews.php');
                 echo "</div>";
+                include('./components/all-reviews.php');
+                
             } ?>
         </div>
     </div>

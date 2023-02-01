@@ -22,12 +22,13 @@ ob_end_flush();
 
 
 <section class="text-center">
-  <h3 >Reviews:</h3>
-  <h5 >Please tell us what you think about the movie:</h5>
-<hr color="white">
+  
+ 
+
 
 <form id="comment-form" method="post">
-<label for="rate">Rate this movie:</label>
+<!-- <label for="rate">Rate this movie:</label> -->
+<h5>Rate this movie:</h5>
   <div class="row">
   <div class="rate mx-auto">
   <input type="radio" id="star5" name="rate" value="5" <?php if ($existingRating && $existingRating['rating'] == 5) { echo 'checked'; } ?> />
@@ -43,9 +44,10 @@ ob_end_flush();
 </div>
 
   </div>
+  <h5 class="mt-2">Please share your movie thoughts:</h5>
   <div class="row">
     <div class="col-8 mx-auto">
-      <label for="comment">Your movie thoughts..</label>
+      <!-- <label for="comment">Your movie thoughts..</label> -->
       <textarea id="comment" name="comment" rows="4" class="form-control " placeholder="This movie was..."></textarea>
     </div>
   </div>

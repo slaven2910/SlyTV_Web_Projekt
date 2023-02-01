@@ -1,10 +1,10 @@
 .site-background {
-	background-color: #c9c9c92e;
+	background-color: #f5f5f5;
 }
 
 .poster {
-	height: 500px !important;
-	width: 400px !important;
+	height: 400px !important;
+	width: 300px !important;
 }
 .well h2,
 .well h5,
@@ -274,11 +274,16 @@ small.text-right {
 
 .add-review-button{
 	margin-bottom: 10px;
+	
 }
 
-.all-comments{
+/* .all-comments{
 	height: 490px;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
+ */
 
-
+.comm{
+	word-break: break-all;
+}

@@ -5,8 +5,8 @@
 
 <body>
   <!-- Navbar -->
-  <section class=" pb-2">
-    <nav class="navbar navbar-expand-lg navbar-inverse d-flex justify-content-between border border-light">
+  <section class="pb-2">
+    <nav class="navbar  navbar-expand-lg navbar-inverse d-flex justify-content-between border border-light">
       <a class="navbar-brand" href="index.php">
         <img src="assets/images/logo-white.png" class="img-fluid logo" style="width: 100px; height: 100px; border-radius:70%; overflow: hidden; margin-top: -6px;">
       </a>
@@ -27,7 +27,7 @@
         <?php } ?>
         <ul class="navbar-nav mr-0 ">
           <li class="nav-item active ml-auto">
-            <a class="nav-link border border-light text-right" href="index.php">
+            <a class="nav-link border border-light text-right mr-5" href="index.php">
               <span>Movies</span>
               <span class="sr-only"></span>
             </a>
@@ -35,7 +35,7 @@
           
 
           <?php if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true) {  ?>
-            <li class="nav-item dropdown ml-3">
+            <li class="nav-item dropdown ml-5">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa fa-user-o"></i>
               </a>

@@ -1,6 +1,6 @@
-
-<section>
-
+<hr color="white">
+<section class="mt-5">
+<h3 class="mb-4">Reviews:</h3>
 <?php
 
 if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true){
@@ -23,12 +23,13 @@ foreach($comments as $row){
   $user_id  = $row['user_id'];
 ?>
 
+
 <form  id='comments' method='post'>
   <ul class='list-group'>
     <li class='list-group-item d-flex justify-content-between align-items-center'>
       <div class='d-flex flex-column'>
         <small class='text-left'>- <?php echo $user_name ?></small>
-        <p class='text-left' id="comment-text"><?php echo $comment ?></p>
+        <p class='text-left comm' style="height:auto;" id="comment-text"><?php echo $comment ?></p>
         <small class='text-left'><?php echo "Posted at: $created_at "?></small>
       </div>
       <div class='d-flex'>
@@ -36,7 +37,7 @@ foreach($comments as $row){
         <?php  if($current_user == $user_id) { ?>
         <a 
         href="#" 
-        class="edit-button btn btn-success"
+        class="edit-button btn btn-success mr-2"
         name='edit-button' 
         data-bs-toggle="modal" 
         data-bs-target="#edit-comment-modal" 
@@ -74,7 +75,7 @@ foreach($comments as $row){
             <small class='text-left'>- <?php echo $user_name ?></small>
             <input type="hidden" id="comment-id" name="comment_id">
             <input type="hidden" id="movie-id" name="movie_id">
-            <textarea id="edit-comment-text" name="new_comment_input"></textarea>     
+            <textarea id="edit-comment-text"  name="new_comment_input"></textarea>     
             <small class='text-left'><?php echo "Posted at: $created_at "?></small>   
             <div class="row pt-3">
               <div class="col-6">          
