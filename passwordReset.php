@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot Password</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles.css">
-</head>
+<?php include('./components/header.php'); ?>
 
-<body>
-    <?php include('./components/navbar.php'); ?>
+<body class="site-background">
+    <div class="container-fluid">
+        <?php include('./components/navbar.php'); ?>
 
-
-    <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card" style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center">
 
                         <div class="mt-md-4 pb-5">
 
-                            <form action="passwordReset-verification.php" method="POST">
+                            <form action="scripts/passwordReset-verification.php" method="POST">
                                 <h2 class="fw-bold mb-2 text-uppercase">Reset Password</h2>
-                                <p class="text-white-50 mb-5">you will recieve an e-mail with instructions to reset your password</p>
+                                <p class="text-50 mb-5">you will recieve an e-mail with instructions to reset your password</p>
 
                                 <?php if (isset($_GET["error"])) { ?>
                                     <!-- alert from https://getbootstrap.com/docs/5.2/components/alerts/ -->
@@ -53,8 +45,7 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 
 </html>
