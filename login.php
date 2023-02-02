@@ -25,7 +25,7 @@
                                     ";
                                     }
                             ?>
-                            <form action="./scripts/login-verification.php?movie_id=<?php echo $movie_id ?>" method="POST">
+                            <form action="./scripts/login-verification.php?movie_id=<?php $movie_id ?>" method="POST">
                                 <h2 class="textOnCard fw-bold mb-2 text-uppercase">Login</h2>
                                 <p class="textOnCard mb-5">Please enter your login and password!</p>
 

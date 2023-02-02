@@ -28,10 +28,10 @@ if (isset($_POST["username"]) && isset($_POST["eMail"]) && isset($_POST["passwor
     $eMail = validate($_POST["eMail"]);
     $pwd = validate($_POST["password"]);
     $pwdRepeat = validate($_POST["pwd-repeat"]);
+    // TODO: hier morgen weitermachen
+    $termscheck = $_POST["terms-checkbox"];
 
     $typedInData = "uname=" . $uname . "&eMail=" . $eMail;
-
-    echo $typedInData;
 
     if (empty($uname)) {
         header("Location: ../signUp.php?error=Name is required&$typedInData");
@@ -44,6 +44,9 @@ if (isset($_POST["username"]) && isset($_POST["eMail"]) && isset($_POST["passwor
         exit();
     } else if (empty($pwdRepeat) || $pwd !== $pwdRepeat) {
         header("Location: ../signUp.php?error=Repeated password does not match the original&$typedInData");
+        exit();
+    } else if (!isset($termscheck)) {
+        header("Location: ../signUp.php?error=You must agree to the tearms and services to register&$typedInData");
         exit();
     } else {
         // password hashing for security reasons --> https://www.php.net/manual/de/faq.passwords.php
@@ -75,6 +78,6 @@ if (isset($_POST["username"]) && isset($_POST["eMail"]) && isset($_POST["passwor
         }
     }
 } else {
-    header("Location: ../signUp.php?error=was ist passiert");
+    header("Location: ../signUp.php?error=etwas ist schief gelaufen");
     exit();
 }
