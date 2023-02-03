@@ -25,11 +25,12 @@ ob_end_flush();
   
  
 
-
+<!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <form id="comment-form" method="post">
-<!-- <label for="rate">Rate this movie:</label> -->
 <h5>Rate this movie:</h5>
+<!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="row">
+    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="rate mx-auto">
   <input type="radio" id="star5" name="rate" value="5" <?php if ($existingRating && $existingRating['rating'] == 5) { echo 'checked'; } ?> />
   <label for="star5" title="text">5 stars</label>
@@ -44,17 +45,23 @@ ob_end_flush();
 </div>
 
   </div>
+  <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <h5 class="mt-2">Please share your movie thoughts:</h5>
+  <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="row">
+    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
     <div class="col-8 mx-auto">
-      <!-- <label for="comment">Your movie thoughts..</label> -->
+      <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
       <textarea id="comment" name="comment" rows="4" class="form-control " placeholder="This movie was..."></textarea>
     </div>
   </div>
   <input type="hidden" name="movie_id" value="<?php echo $movie_id ?>">
   <input type="hidden" name="user_id" value="<?php echo $user_id ?>">
+  <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="row">
+    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
     <div class="col-8 mx-auto text-right py-4">
+      <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
       <input class="btn btn-dark border border-light mb-3" type="submit" value="Submit">
     </div>
   </div>
