@@ -385,6 +385,12 @@ Animated CSS Buttons, The Laazy Guy, online available at https://dev.to/webdeasy
 		margin-right: 0px;
 	}
 }
+
+@media (max-height: 1040px) {
+	.sticky-top {
+		position: unset;
+	}
+}
 /* 992px and down */
 @media (max-width: 992px) {
 	/* Erweiterung/Anpassung der Bootstrap-Klasse .dropdown-toggle */

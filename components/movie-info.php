@@ -29,7 +29,7 @@ if ($ratings) {
         <p>Title: <strong><?php echo $title ?></strong></p>
         <p>Rating: <strong><?php echo $ratingAvg ?></strong> </p>
         <p>Publishing Year: <strong><?php echo $publishing_year ?></strong></p>
-        <p>Genre: <strong><? echo $genre ?></strong></p>
+        <p>Genre: <strong><?php echo $genre ?></strong></p>
         <p>Plot: <strong><?php echo $plot ?></strong></p>
     </div>
   </div>
