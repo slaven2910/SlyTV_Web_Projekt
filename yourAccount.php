@@ -5,7 +5,10 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
   <!DOCTYPE html>
   <html lang="en">
 
-  <?php include('./components/header.php'); ?>
+  <?php include('./components/header.php');
+  
+  $user_name = $_SESSION["username"];
+  $user_id = $_SESSION["user_id"]; ?>
 
   <body class="site-background">
     <div class="container-fluid">
@@ -18,7 +21,7 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
             <div class="d-flex justify-content-center py-4"><img src="./assets/images/user_profile_icon.png" class="img-fluid" alt="profile picture"><br><br><br></div>
 
             <ul class="list-group">
-              <li class="list-group-item" style="color: black;"><?php echo $_SESSION["username"]; ?></li>
+              <li class="list-group-item" style="color: black;"><?php echo $user_name; ?></li>
               <li class="list-group-item" style="color: black;"><?php echo $_SESSION["email"]; ?></li>
             </ul>
 
@@ -30,12 +33,13 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
             <hr />
 
             <?php include('./scripts/connect.php');
+                  include 'scripts/review.php';
 
             // Movie comments
             $movieCommentsQuery = 'SELECT public."movie_comments".id as comment_id, public."movie_comments".comment, 
               public."movie_comments".created_at,  public."Movies".title, public."Movies".id as movie_id
               FROM public."movie_comments" FULL OUTER JOIN public."Movies"  ON public."movie_comments".movie_id = public."Movies".id 
-              WHERE public."movie_comments".user_id = ' . $_SESSION["user_id"] . ' ORDER BY created_at desc';
+              WHERE public."movie_comments".user_id = ' . $user_id . ' ORDER BY created_at desc';
 
             $resultMovieComments = pg_query($dbConn, $movieCommentsQuery);
 
@@ -44,21 +48,20 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
 
               foreach ($rows as $row) {
                 // weiß nicht ob man das braucht
-
-                $mCommentId = $row['comment_id'];
-                $mId = $row['movie_id'];
-                $mTitle = $row['title'];
-                $mComment = $row['comment'];
-                $mCreatedAt = date("d/m/Y H:i", strtotime($row['created_at']));
+                $comment_id = $row['comment_id'];
+                $movie_id = $row['movie_id'];
+                $movie_title = $row['title'];
+                $comment = $row['comment'];
+                $created_at = date("d/m/Y H:i", strtotime($row['created_at']));
                 ?>
 
                 <form  id='comments' method='post'>
                   <ul class='list-group'>
                     <li class='list-group-item d-flex justify-content-between align-items-center'>
                       <div class='d-flex flex-column'>
-                        <small class='text-left'>- <?php echo $_SESSION["username"]; ?></small>
-                        <p class='text-left comment-multiple-lines' style="height:auto;" id="comment-text"><?php echo $mComment; ?></p>
-                        <small class='text-left'><?php echo "Posted at: $mCreatedAt for $mTitle";?></small>
+                        <small class='text-left'>- <?php echo $user_name; ?></small>
+                        <p class='text-left comment-multiple-lines' style="height:auto;" id="comment-text"><?php echo $comment; ?></p>
+                        <small class='text-left'><?php echo "Posted at: $created_at for $movie_title";?></small>
                       </div>
                       <div class='d-flex'>
                         <input type='hidden' name='comment_id' value='<?php $comment_id; ?>'>
@@ -98,11 +101,11 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
                       <div class="modal-body">
                         <form id="edit-comment-form" method='post'>
                           <div class='d-flex flex-column'>
-                            <small class='text-left'>- <?php echo $_SESSION["username"]; ?></small>
+                            <small class='text-left'>- <?php echo $user_name; ?></small>
                             <input type="hidden" id="comment-id" name="comment_id">
                             <input type="hidden" id="movie-id" name="movie_id">
                             <textarea id="edit-comment-text"  name="new_comment_input"></textarea>     
-                            <small class='text-left'><?php echo "Posted at: $mCreatedAt "?></small>   
+                            <small class='text-left'><?php echo "Posted at: $created_at for $movie_title"?></small>   
                             <div class="row pt-3">
                               <div class="col-6">          
                                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
