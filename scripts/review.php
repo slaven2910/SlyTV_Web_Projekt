@@ -142,4 +142,3 @@ function getComments($dbConn, $movie_id) {
   }
   
 ?>
-

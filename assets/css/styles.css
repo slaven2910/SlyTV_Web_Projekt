@@ -1,0 +1,452 @@
+/* LEGAL NOTICE
+
+  This project serves as a teaching example or sample solution in the 
+  context of teaching, to teach knowledge in software development. 
+  It contains a software solution.
+
+  Please check the LICENSE OF THIS PROJECT below, to find the license 
+  information for this project. This license is just related to the 
+  contained software solution and its source code, as far as the 
+  software solution was developed by the copyright holder.
+  This license bases on [bsd-3], but some modifications make it 
+  different from regular BSD-Licences. 
+
+  Errors, changes and deviations are not impossible!
+
+  The project was developed and tested with the software 
+  [Apache 2.4 VS17] in connexion with [php 8.1.12].
+  [Apache 2.4 VS17] and [php 8.1.12] will not be delivered/distributed 
+  as parts of this project. 
+  The project uses elements of [Bootstrap 5.2.3], [Font Awesome 5.15.3], [1].
+  Furthermore basic functionalities of the operating system
+  Microsoft Windows 10 (Version 10.0.19044.2251) were used
+  in order to create this project. Especially the functionality 
+  of "Microsoft Print to PDF" or the editor "notepad" were used.
+  
+LICENSE OF THIS PROJECT
+
+  This license bases on [bsd-3] with fundamental modifications:
+
+  Copyright 2022 Slaven Mlinaric, IU University of Applied Sciences, 
+  Darmstädter Landstraße 110, 60598 Frankfurt am Main, Germany
+
+  The use of this project is only allowed in the context of 
+  the lecture to facilitate the understanding of programming 
+  techniques. Redistribution and use in source or binary forms, with 
+  or without modification, are not allowed. 
+
+  DISCLAIMER [bsd-3]: 
+   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
+   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
+   FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE 
+   COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+   INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
+   BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+   LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
+   CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
+   LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
+   ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+   POSSIBILITY OF SUCH DAMAGE.
+
+REFERENCES
+
+  [bsd-3] Open Source Initiative (n. Y.): "The 3-Clause BSD License". 
+     URL: https://opensource.org/licenses/BSD-3-Clause, 
+     accessed 2023-FEB-01.
+  [Apache 2.4 VS17] Apache Lounge powered by Apache (2021): 
+     "Apache 2.4 VS17 Windows Binaries and Modules". Version 2.4.54 Win64. 
+     Online available at URL: https://www.apachelounge.com/download/, 
+     accessed 2023-FEB-01. 
+     [License-URL: https://www.apachelounge.com/contact.html].
+  [php 8.1.12] The PHP Group (2022): "PHP: Hypertext Preprocessor". 
+     Version 8.1.12. Online available at 
+     URL: https://windows.php.net/download/, accessed 2023-FEB-01. 
+     [License: PHP License v3.01, 
+     License-URL: https://www.php.net/license/3_01.txt].
+  [Bootstrap 5.2.3] Mark Otto / Jacob Thornton / XhmikosR / GeoSot / 
+     Rohit Sharma / alpadev / Gael Poupard / Patrick H. Lauke /
+     Martijn Cuppend / Johann-S / Gleb Mazovetskiy (2022): "Bootstrap".
+     Version 5.2.3. Bootstrap is released under the MIT license 
+     and is copyright 2022 Twitter. Online available at
+     URL: https://getbootstrap.com/, accessed 2022-DECEMBER-06.
+     [Bootstrap v5.2.3 (https://getbootstrap.com/), 
+     Copyright 2011-2022 The Bootstrap Authors, 
+     Copyright 2011-2022 Twitter, Inc., 
+     Licensed under MIT 
+     (https://github.com/twbs/bootstrap/blob/main/LICENSE)].
+  [Font Awesome 5.15.3] Font Awesome, Inc. (2022): "Font Awesome".
+     Version 5.15.3. Font Awesome is released under the MIT License.
+     Online available at URL: https://fontawesome.com,
+     accessed 2023-FEB-01.
+     [Font Awesome v5.15.3 (https://fontawesome.com),
+     Copyright 2022 Font Awesome, Inc.,
+     Licensed under MIT (https://fontawesome.com/license/free).]
+  [1] Animated CSS Buttons, The Laazy Guy, https://codepen.io/thelaazyguy/pen/brryVq 
+     accessed 2023-FEB-01.
+     [1 Animated CSS Buttons, The Laazy Guy,
+     Licensed under MIT (https://codepen.io/thelaazyguy/details/brryVq)]
+  [2] Five Star Rating, allenhe, https://codepen.io/hesguru/pen/BaybqXv
+     accessed 2023-FEB-01.
+     [2 Five Star Rating, allenhe,
+     Licensed under MIT (https://codepen.io/hesguru/details/BaybqXv)]
+
+REMARKS
+
+  The file "Bootstrap_License.txt" contains the licence of
+  Bootstrap, obtained from the URL
+  https://github.com/twbs/bootstrap/blob/main/LICENSE
+  accessed on February 1st 2023.
+  The file "Font_Awesome_License.txt" contains the license of 
+  the used Icon-Font Font Awesome, obtained from the URL
+  https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+  accessed on February 1st 2023.
+  The file "Animated_CSS_Button_License.txt" contains the license of 
+  the used Animated CSS Buttons, obtained from the URL
+  https://codepen.io/thelaazyguy/details/brryVq
+  accessed on February 1st 2023.
+  The file "Five_Star_Rating.txt" contains the license of 
+  the used Five Star Rating, obtained from the URL
+  https://codepen.io/hesguru/details/BaybqXv
+  accessed on February 1st 2023.
+
+BOOTSTRAP LICENSE
+
+The MIT License (MIT)
+
+Copyright (c) 2011-2022 Twitter, Inc.
+Copyright (c) 2011-2022 The Bootstrap Authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+  
+  */
+
+/* Background color for the website */
+.site-background {
+	background-color: #f5f5f5;
+}
+
+body {
+	min-height: 100vh;
+}
+
+/* buttons on hover */
+button:hover {
+	opacity: 0.8;
+}
+/* primary color */
+/* Erweiterung/Anpassung der Bootstrap-Klasse .bg-primary */
+.bg-primary {
+	background-color: black !important;
+}
+/* icon in the navbar */
+.iconClass {
+	border-radius: 0.25rem;
+}
+
+/* border radius */
+.border-radius {
+	border-radius: 10px;
+}
+
+/* Erweiterung/Anpassung der Bootstrap-Klasse .nav-link */
+.nav-link {
+	color: black !important	;
+	font-size: 1.5rem;
+}
+/* Erweiterung/Anpassung der Bootstrap-Klasse .nav-item:hover */
+.nav-item:hover {
+	text-decoration: none;
+	border-bottom: 2px solid;
+	padding-bottom: 2px;
+	transition: all 0.1s ease;
+}
+/* Erweiterung/Anpassung der Bootstrap-Klasse .dropdown-menu */
+.dropdown-menu {
+	top: 70%;
+	right: 2rem;
+}
+
+/* custom css for the searchbar */
+.search-bar {
+	width: 400px;
+}
+
+.search-bar-button {
+	margin-right: 200px;
+}
+
+/* poster on movie info component size */
+.poster {
+	height: 400px !important;
+	width: 300px !important;
+}
+
+/* Erweiterung/Anpassung der Bootstrap-Klasse .well */
+/* Überschreiben des Boot-Strap-Designs für h2, h5 und p */
+.well h2,
+.well h5,
+.well p {
+	margin: 10px 0;
+}
+
+/* movie-card */
+
+.movie-image-placeholder {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 280px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+/* text-to-upper-case */
+.uppercase {
+	text-transform: capitalize;
+}
+
+.truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/* Erweiterung/Anpassung der Bootstrap-Klasse .card-footer */
+.card-footer {
+	background-color: transparent !important;
+	padding: 0 !important;
+	border: none !important;
+}
+
+.edit-button {
+	margin-right: 5px;
+}
+
+/* wraps content */
+.content-wrapper {
+	max-width: 1200px;
+	margin: auto;
+}
+
+/* movie infos */
+
+/* Überschreiben des Boot-Strap-Designs für p */
+.movie-infos p {
+	font-size: large;
+}
+
+/* add comment */
+.add-comment-textarea {
+	width: 50%;
+}
+
+.add-review-button {
+	margin-bottom: 10px;
+}
+
+/* register terms checkbox */
+.terms-checkbox {
+	position: absolute;
+	right: 30px;
+}
+
+.comment-multiple-lines {
+	word-break: break-all;
+}
+
+/* Start 
+
+Five Star Rating, allenhe, online available at https://codepen.io/hesguru/pen/BaybqXv , with modifications made by [Slaven Mlinaric]. */
+.rate {
+	float: left;
+	width: 170px;
+	height: 46px;
+	padding: 0 10px;
+}
+.rate:not(:checked) > input {
+	position: absolute;
+	top: -9999px;
+}
+.rate:not(:checked) > label {
+	float: right;
+	width: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 30px;
+	color: #ccc;
+}
+.rate:not(:checked) > label:before {
+	content: "★ ";
+}
+.rate > input:checked ~ label {
+	color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+	color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+	color: #c59b08;
+}
+/* End */
+
+/* Start 
+
+Animated CSS Buttons, The Laazy Guy, online available at https://dev.to/webdeasy/top-20-css-buttons-animations-f41 , with modifications made by [Slaven Mlinaric]. */
+
+.button-wrapper a {
+	width: 200px;
+	line-height: 40px;
+	font-size: 18px;
+	font-family: sans-serif;
+	text-decoration: none;
+	color: white;
+	border: 2px solid #333;
+	letter-spacing: 2px;
+	text-align: center;
+	position: relative;
+	transition: all 0.35s;
+}
+
+.button-wrapper a span {
+	position: relative;
+	z-index: 2;
+}
+
+.button-wrapper a:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: white;
+	transition: all 0.35s;
+}
+
+.button-wrapper a:hover {
+	color: black;
+}
+
+.button-wrapper a:hover:after {
+	width: 100%;
+}
+
+/* End */
+
+/* Media queries */
+
+/* @media (min-height: 1120px) {
+	.footer {
+		display: none !important;
+	}
+} */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	/* burger menu icon */
+	.iconClass {
+		display: none;
+	}
+	/* Erweiterung/Anpassung der Bootstrap-Klasse .navbar-toggler */
+	.navbar-toggler {
+		display: none;
+	}
+}
+/* 1288px and down */
+@media (max-width: 1288px) {
+	.search-bar {
+		width: 200px;
+	}
+}
+/* 1095px and down */
+@media (max-width: 1095px) {
+	.search-bar {
+		margin-left: auto;
+	}
+	.search-bar-button {
+		margin-right: 0px;
+	}
+}
+
+@media (max-height: 1040px) {
+	.sticky-top {
+		position: unset;
+	}
+}
+/* 992px and down */
+@media (max-width: 992px) {
+	/* Erweiterung/Anpassung der Bootstrap-Klasse .dropdown-toggle */
+	.dropdown-toggle {
+		text-align: right;
+	}
+	/* Erweiterung/Anpassung der Bootstrap-Klasse .dropdown-menu */
+	.dropdown-menu {
+		text-align: end;
+		width: 20%;
+		float: right;
+	}
+	/* Erweiterung/Anpassung der Bootstrap-Klasse .navbar-nav */
+	.navbar-nav {
+		float: right;
+	}
+	.search-bar {
+		width: 400px;
+	}
+	.movie-infos {
+		margin-left: 0px;
+	}
+}
+/* 768px and down */
+@media (max-width: 768px) {
+	.search-bar {
+		width: 200px;
+	}
+}
+/* 575.98px and down */
+@media (max-width: 575.98px) {
+	/* Erweiterung/Anpassung der Bootstrap-Klasse .card */
+	.card {
+		max-width: 100%;
+	}
+}
+/* 375px and down */
+@media (max-width: 375px) {
+	.search-bar {
+		margin-top: 20px;
+		margin-left: auto;
+		width: 200px;
+	}
+	.search-bar-button {
+		margin-top: 20px;
+		margin-right: 0px;
+	}
+	.poster {
+		height: 400px !important;
+		width: 300px !important;
+	}
+	.movie-infos {
+		margin-left: 0px;
+	}
+}
