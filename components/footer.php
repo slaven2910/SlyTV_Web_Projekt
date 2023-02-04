@@ -1,5 +1,5 @@
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-<footer class="bg-black py-4 mt-5 d-flex align-items-center footer">
+<footer class="bg-black py-4 mt-5 d-flex align-items-center footer mt-5 <?php if(isset($_POST['search_term'])){ echo 'fixed-bottom';} ?>">
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="container">
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->

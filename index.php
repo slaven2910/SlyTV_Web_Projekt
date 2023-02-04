@@ -65,7 +65,8 @@ if (isset($_POST['search_term'])) {
 </section>
 </div>
 <?php 
-include './components/footer.php'; 
+
+    include './components/footer.php'; 
 ?>
  
 </body>
