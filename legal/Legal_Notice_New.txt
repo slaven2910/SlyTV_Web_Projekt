@@ -17,6 +17,7 @@ LEGAL NOTICE
   [Apache 2.4 VS17] in connexion with [php 8.1.12].
   [Apache 2.4 VS17] and [php 8.1.12] will not be delivered/distributed 
   as parts of this project. 
+
   The project uses elements of [Bootstrap 5.2.3], [Font Awesome 5.15.3], [1] and [2].
   Furthermore basic functionalities of the operating system
   Microsoft Windows 10 (Version 10.0.19044.2251) were used
@@ -82,6 +83,7 @@ REFERENCES
      [Font Awesome v5.15.3 (https://fontawesome.com),
      Copyright 2022 Font Awesome, Inc.,
      Licensed under MIT (https://fontawesome.com/license/free).]
+
   [JQuery 3.5.1 Slim], JQuery Foundation, https://code.jquery.com/jquery-3.5.1.slim.min.js 
      accessed 2023-FEB-01.
   [1] Animated CSS Buttons, The Laazy Guy, https://codepen.io/thelaazyguy/pen/brryVq 

@@ -1,4 +1,5 @@
 <hr color="white">
+
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <section class="mt-5">
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -27,6 +28,7 @@ foreach($comments as $row){
 
 
 <form  id='comments' method='post'>
+
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <ul class='list-group'>
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -54,6 +56,7 @@ foreach($comments as $row){
         data-comment-id="<?php echo $comment_id; ?>" 
         data-movie-id="<?php echo $movie_id; ?>" 
         data-comment-text="<?php echo $comment; ?>">
+
         <!-- Bezugnahme auf Design-Elemente von [Font Awesome 5.15.3]. -->
         <i class='fa-sharp fa-solid fa-pen'></i>
         </a>
@@ -71,6 +74,7 @@ foreach($comments as $row){
     <hr >
   </ul>
 </form>
+
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <div class="modal fade" id="edit-comment-modal" tabindex="-1" aria-hidden="true">
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -95,6 +99,7 @@ foreach($comments as $row){
             <input type="hidden" id="comment-id" name="comment_id">
             <input type="hidden" id="movie-id" name="movie_id">
             <textarea id="edit-comment-text"  name="new_comment_input"></textarea>     
+
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
             <small class='text-left'><?php echo "Posted at: $created_at "?></small>   
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->

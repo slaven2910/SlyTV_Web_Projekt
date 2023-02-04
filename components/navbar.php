@@ -4,6 +4,7 @@
 <?php include('./components/header.php'); ?>
 
 <body>
+
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <section class="pb-2">
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -43,6 +44,7 @@
               <span class="sr-only"></span>
             </a>
           </li>
+
           <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
           <div class="vr mx-3"></div>
 
@@ -63,6 +65,7 @@
               </ul>
             </li>
           <?php } else { ?>
+
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
             <li class="nav-item active ml-auto">
               <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->

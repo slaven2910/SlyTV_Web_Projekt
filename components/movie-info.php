@@ -12,6 +12,7 @@ $ratings = getMovieRatingAvg($dbConn, $id);
 if ($ratings) {
   $ratingAvg = round($ratings['avg_rating'], 2);
 }
+
 ?>
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <section class='mb-5'>
@@ -36,6 +37,3 @@ if ($ratings) {
 
 </div>
 </section>
-
-
-
