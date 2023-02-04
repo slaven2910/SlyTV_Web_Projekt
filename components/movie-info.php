@@ -13,12 +13,17 @@ if ($ratings) {
   $ratingAvg = round($ratings['avg_rating'], 2);
 }
 
+//Add path to poster
+$image = ".assets/images/" . $poster;
+
+//TODO neue Colum anlegen damit poster typ string ist
+
 echo "
 <section class='mb-5'>
 <div class='well'>
   <div class='row justify-content-center'>
     <div class='col-md-4'>
-        <img class='thumbnail d-block poster' src='./assets/images/moviePlaceholder.jpg' alt='Card image cap'>
+        <img class='thumbnail d-block poster' src=$image alt='Card image cap'>
     </div>
     <div class='col-md-4 movie-infos align-self-center'>
         <p>Title: <strong>$title</strong></p>

@@ -1,7 +1,7 @@
 
   <div class="col-lg-3 col-md-4 col-sm-6 pb-4">
   <div class="card border-radius">
-    <div class="movie-image-placeholder border-radius" style="background-image: url(./assets/images/img2.jpg)"
+    <div class="movie-image-placeholder border-radius" style="background-image: url(<?php $path = './assets/images/'; echo $path . $poster?>)"
       ></div>
     <div class="card-body d-flex flex-column text-center">
       <h5 class="card-title truncate"> <?php echo $title; ?> </h5>

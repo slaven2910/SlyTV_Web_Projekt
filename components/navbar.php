@@ -49,6 +49,7 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-right">
                 <li><a class="dropdown-item" type="button" href="./yourAccount.php">Your Account<span class="sr-only"></a></li>
+                <li><a class="dropdown-item" type="button" href="./create-movie.php">Add a movie<span class=""sr-only></span></a></li>
                 <li><a class="dropdown-item" type="button" href="./scripts/logout.php">Logout<span class="sr-only"></span></a></li>
               </ul>
             </li>
