@@ -16,8 +16,6 @@ if ($ratings) {
 //Add path to poster
 $image = ".assets/images/" . $poster;
 
-//TODO neue Colum anlegen damit poster typ string ist
-
 echo "
 <section class='mb-5'>
 <div class='well'>
