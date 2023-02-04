@@ -64,16 +64,16 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
                         <small class='text-left'><?php echo "Posted at: $created_at for $movie_title";?></small>
                       </div>
                       <div class='d-flex'>
-                        <input type='hidden' name='comment_id' value='<?php $comment_id; ?>'>
+                      <input type='hidden' name='comment_id' value='<?php echo $comment_id ?>'>
                         <a 
                         href="#" 
                         class="edit-button btn btn-success mr-2"
                         name='edit-button' 
                         data-bs-toggle="modal" 
                         data-bs-target="#edit-comment-modal" 
-                        data-comment-id="<?php $comment_id; ?>" 
-                        data-movie-id="<?php $movie_id; ?>" 
-                        data-comment-text="<?php $comment; ?>">
+                        data-comment-id="<?php echo $comment_id; ?>" 
+                        data-movie-id="<?php echo $movie_id; ?>" 
+                        data-comment-text="<?php echo $comment; ?>">
                         <i class='fa-sharp fa-solid fa-pen'></i>
                         </a>
                         <button 
@@ -122,15 +122,16 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
                 </div>
                 <script>
                   $('.edit-button').click(function() {
-                    var commentId = $(this).data('comment_id');
-                    var commentText = $(this).data('comment');
+                    var commentId = $(this).data('comment-id');
+                    var commentText = $(this).data('comment-text');
                     var movieId = $(this).data('movie-id');
                     $('#comment-id').val(commentId);
                     $('#movie-id').val(movieId);
                     $('#comment-text').val(commentText);
                     $('#edit-comment-text').val(commentText);
                   });
-                </script> <?php
+                </script> 
+                <?php
               }
             }
 

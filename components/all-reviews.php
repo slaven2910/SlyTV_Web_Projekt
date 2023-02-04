@@ -36,7 +36,7 @@ foreach($comments as $row){
       <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
       <div class='d-flex flex-column'>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-        <small class='text-left'>- <?php echo $user_name ?></small>
+        <small class='text-left' id="username">- <?php echo $user_name ?></small>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
         <p class='text-left comment-multiple-lines' style="height:auto;" id="comment-text"><?php echo $comment ?></p>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -55,7 +55,8 @@ foreach($comments as $row){
         data-bs-target="#edit-comment-modal" 
         data-comment-id="<?php echo $comment_id; ?>" 
         data-movie-id="<?php echo $movie_id; ?>" 
-        data-comment-text="<?php echo $comment; ?>">
+        data-comment-text="<?php echo $comment; ?>"
+        data-user-name="<?php echo $user_name; ?>">
 
         <!-- Bezugnahme auf Design-Elemente von [Font Awesome 5.15.3]. -->
         <i class='fa-sharp fa-solid fa-pen'></i>
@@ -95,7 +96,7 @@ foreach($comments as $row){
           <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
           <div class='d-flex flex-column'>
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-            <small class='text-left'>- <?php echo $user_name ?></small>
+            <input type="text" readonly style="border: 0; outline:none;" class='text-left' id="user-name" name="user_name">
             <input type="hidden" id="comment-id" name="comment_id">
             <input type="hidden" id="movie-id" name="movie_id">
             <textarea id="edit-comment-text"  name="new_comment_input"></textarea>     
@@ -126,8 +127,10 @@ foreach($comments as $row){
     var commentId = $(this).data('comment-id');
     var commentText = $(this).data('comment-text');
     var movieId = $(this).data('movie-id');
+    var username = $(this).data('user-name');
     $('#comment-id').val(commentId);
     $('#movie-id').val(movieId);
+    $('#user-name').val(username);
     $('#comment-text').val(commentText);
     $('#edit-comment-text').val(commentText);
   });
