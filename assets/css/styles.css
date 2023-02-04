@@ -146,6 +146,10 @@ body {
 	min-height: 100vh;
 }
 
+.footer {
+	width: 100%;
+}
+
 /* buttons on hover */
 button:hover {
 	opacity: 0.8;
