@@ -76,7 +76,9 @@
 
                                     <button type="submit" class="btn btn-outline-dark btn-lg  w-100">Register</button>
 
-                                    <p class="text-center text-muted mt-5 mb-0">Already have an account? <a href="login.php" class="fw-bold text-body"><u>Login here</u></a></p>
+                                    <p class="text-center text-muted mt-5 mb-0">Already have an account?
+                                        <a href="login.php" class="fw-bold text-body"><u>Login here</u></a>
+                                    </p>
                                 </form>
 
                             </div>

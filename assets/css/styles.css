@@ -361,6 +361,7 @@ Animated CSS Buttons, The Laazy Guy, online available at https://dev.to/webdeasy
 
 /* Media queries */
 
+
 /* @media (min-height: 1120px) {
 	.footer {
 		display: none !important;
@@ -393,6 +394,7 @@ Animated CSS Buttons, The Laazy Guy, online available at https://dev.to/webdeasy
 		margin-right: 0px;
 	}
 }
+
 
 @media (max-height: 1040px) {
 	.sticky-top {

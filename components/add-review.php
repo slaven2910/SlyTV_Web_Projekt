@@ -25,6 +25,7 @@ ob_end_flush();
   
  
 
+
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <form id="comment-form" method="post">
 <h5>Rate this movie:</h5>
@@ -45,6 +46,7 @@ ob_end_flush();
 </div>
 
   </div>
+
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <h5 class="mt-2">Please share your movie thoughts:</h5>
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -57,6 +59,7 @@ ob_end_flush();
   </div>
   <input type="hidden" name="movie_id" value="<?php echo $movie_id ?>">
   <input type="hidden" name="user_id" value="<?php echo $user_id ?>">
+
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="row">
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
