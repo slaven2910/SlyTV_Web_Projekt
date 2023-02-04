@@ -73,7 +73,9 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
                         data-bs-target="#edit-comment-modal" 
                         data-comment-id="<?php echo $comment_id; ?>" 
                         data-movie-id="<?php echo $movie_id; ?>" 
-                        data-comment-text="<?php echo $comment; ?>">
+                        data-comment-text="<?php echo $comment; ?>"
+                        data-created-at="<?php echo $created_at; ?>"
+                        data-movie-title="<?php echo $movie_title; ?>">
                         <i class='fa-sharp fa-solid fa-pen'></i>
                         </a>
                         <button 
@@ -105,7 +107,11 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
                             <input type="hidden" id="comment-id" name="comment_id">
                             <input type="hidden" id="movie-id" name="movie_id">
                             <textarea id="edit-comment-text"  name="new_comment_input"></textarea>     
-                            <small class='text-left'><?php echo "Posted at: $created_at for $movie_title"?></small>   
+                            <small class='text-left'>Posted at: 
+                              <input type="text" readonly style="border: 0; outline:none; width: 115px;" class='text-left' id="created-at" name="created_at"> 
+                              for
+                              <input type="text" readonly style="border: 0; outline:none;" class='text-left' id="movie-title" name="movie_title"> 
+                            </small>   
                             <div class="row pt-3">
                               <div class="col-6">          
                                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
@@ -125,12 +131,17 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
                     var commentId = $(this).data('comment-id');
                     var commentText = $(this).data('comment-text');
                     var movieId = $(this).data('movie-id');
+                    var username = $(this).data('user-name');
+                    var createdAt = $(this).data('created-at');
+                    var movieTitle = $(this).data('movie-title');
                     $('#comment-id').val(commentId);
                     $('#movie-id').val(movieId);
                     $('#comment-text').val(commentText);
+                    $('#created-at').val(createdAt);
+                    $('#movie-title').val(movieTitle);
                     $('#edit-comment-text').val(commentText);
                   });
-                </script> 
+                </script>
                 <?php
               }
             }

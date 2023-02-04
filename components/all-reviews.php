@@ -56,7 +56,8 @@ foreach($comments as $row){
         data-comment-id="<?php echo $comment_id; ?>" 
         data-movie-id="<?php echo $movie_id; ?>" 
         data-comment-text="<?php echo $comment; ?>"
-        data-user-name="<?php echo $user_name; ?>">
+        data-user-name="<?php echo $user_name; ?>"
+        data-created-at="<?php echo $created_at; ?>">
 
         <!-- Bezugnahme auf Design-Elemente von [Font Awesome 5.15.3]. -->
         <i class='fa-sharp fa-solid fa-pen'></i>
@@ -102,7 +103,9 @@ foreach($comments as $row){
             <textarea id="edit-comment-text"  name="new_comment_input"></textarea>     
 
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-            <small class='text-left'><?php echo "Posted at: $created_at "?></small>   
+            <small class='text-left'>Posted at:  
+              <input type="text" readonly style="border: 0; outline:none;" class='text-left' id="created-at" name="created_at">
+            </small> 
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
             <div class="row pt-3">
               <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -128,10 +131,12 @@ foreach($comments as $row){
     var commentText = $(this).data('comment-text');
     var movieId = $(this).data('movie-id');
     var username = $(this).data('user-name');
+    var createdAt = $(this).data('created-at');
     $('#comment-id').val(commentId);
     $('#movie-id').val(movieId);
     $('#user-name').val(username);
     $('#comment-text').val(commentText);
+    $('#created-at').val(createdAt);
     $('#edit-comment-text').val(commentText);
   });
 </script>
