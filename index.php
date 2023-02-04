@@ -61,10 +61,10 @@ if (isset($_POST['search_term'])) {
 }
 ?>
 
-
 </div>
 </section>
 </div>
 <?php include './components/footer.php'; ?>
+
 </body>
 </html>

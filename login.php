@@ -26,6 +26,7 @@
                                     }
                             ?>
                             <form action="./scripts/login-verification.php?movie_id=<?php $movie_id ?>" method="POST">
+
                                 <h2 class="textOnCard fw-bold mb-2 text-uppercase">Login</h2>
                                 <p class="textOnCard mb-5">Please enter your login and password!</p>
 
@@ -49,6 +50,7 @@
                                 <p class="small mb-5 pb-lg-2 "><a href="passwordReset.php" class="text-body">Forgot password?</a></p>
 
                                 <button type="submit" class="btn btn-outline-dark btn-lg px-5 w-100">Login</button>
+
                             </form>
                         </div>
 

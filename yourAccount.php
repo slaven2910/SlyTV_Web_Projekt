@@ -158,7 +158,6 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
     </div>
     <?php include('./components/footer.php') ?>
   </body>
-
   </html>
 
 <?php
