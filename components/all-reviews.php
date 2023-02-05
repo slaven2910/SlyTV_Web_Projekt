@@ -104,7 +104,6 @@ foreach($comments as $row){
 
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
             <small class='text-left'>Posted at:  
-              <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
               <input type="text" readonly style="border: 0; outline:none;" class='text-left' id="created-at" name="created_at">
             </small> 
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
