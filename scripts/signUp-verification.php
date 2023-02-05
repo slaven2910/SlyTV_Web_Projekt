@@ -1,12 +1,6 @@
 <?php
-include 'db-credientials.php';
+include 'connect.php';
 session_start();
-
-// Datenbankverbindung aufbauen
-
-$connStr = "host=$host port=$port dbname=$db user=$user password=$pw";
-
-$dbConn = pg_connect($connStr);
 
 if (!$dbConn) {
   echo "Ein Fehler ist aufgetreten.\n";
