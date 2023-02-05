@@ -38,6 +38,7 @@
                                     <?php } ?>
 
                                     <?php if (isset($_GET["uname"])) { ?>
+
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                         <div class="form-outline mb-4">
                                             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -56,6 +57,7 @@
                                     <?php } ?>
 
                                     <?php if (isset($_GET["eMail"])) { ?>
+
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                         <div class="form-outline mb-4">
                                             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->

@@ -26,7 +26,6 @@ foreach($comments as $row){
   $user_id  = $row['user_id'];
 ?>
 
-
 <form  id='comments' method='post'>
 
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -131,6 +130,7 @@ foreach($comments as $row){
     var commentId = $(this).data('comment-id');
     var commentText = $(this).data('comment-text');
     var movieId = $(this).data('movie-id');
+
     var username = $(this).data('user-name');
     var createdAt = $(this).data('created-at');
     $('#comment-id').val(commentId);
@@ -142,7 +142,5 @@ foreach($comments as $row){
   });
 </script>
 
-
-<?php } ?>
 </div>
  </section>

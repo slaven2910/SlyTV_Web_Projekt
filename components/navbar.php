@@ -44,7 +44,6 @@
               <span class="sr-only"></span>
             </a>
           </li>
-
           <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
           <div class="vr mx-3"></div>
 
@@ -85,7 +84,7 @@
 
 
   </section>
- 
+
 </body>
 
 </html>

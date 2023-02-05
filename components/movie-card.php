@@ -1,4 +1,3 @@
-
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="col-lg-3 col-md-4 col-sm-6 pb-4">
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -20,4 +19,3 @@
     </div>
   </div>
 </div>
-

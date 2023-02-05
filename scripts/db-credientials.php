@@ -4,5 +4,5 @@ $host = "localhost";
 $port = "5432";
 $db = "SlyTV";
 $user = "postgres";
-$pw = "aspire938";
+$pw = "1234";
 ?>
