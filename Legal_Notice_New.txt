@@ -82,7 +82,6 @@ REFERENCES
      [Font Awesome v5.15.3 (https://fontawesome.com),
      Copyright 2022 Font Awesome, Inc.,
      Licensed under MIT (https://fontawesome.com/license/free).]
-   [PHP Mailer 6.7.1] PHP Mailer, 
 
 REMARKS
 
