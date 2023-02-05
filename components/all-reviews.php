@@ -36,7 +36,7 @@ foreach($comments as $row){
       <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
       <div class='d-flex flex-column'>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-        <small class='text-left' id="username">- <?php echo $user_name ?></small>
+        <small class='text-left' id="username">- <?php echo "$user_name $comment_id"; ?></small>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
         <p class='text-left comment-multiple-lines' style="height:auto;" id="comment-text"><?php echo $comment ?></p>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
