@@ -24,7 +24,7 @@ if ($ratings) {
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
     <div class='col-lg-4'>
       <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-        <img class='thumbnail d-block poster' src='./assets/images/moviePlaceholder.jpg' alt='Card image cap'>
+        <img class='thumbnail d-block poster' src=<?php $path="./assets/images/"; echo $path . $poster?> alt='Card image cap'>
     </div>
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
     <div class='col-lg-4 movie-infos align-self-center'>
