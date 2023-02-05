@@ -17,14 +17,8 @@ $existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id);
 // Flush output buffer
 ob_end_flush();
 ?>
-
-<!-- Rest of add-review.php file -->
-
-
+<!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <section class="text-center">
-  
- 
-
 
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <form id="comment-form" method="post">
