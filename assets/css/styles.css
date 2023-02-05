@@ -225,6 +225,7 @@ button:hover {
 .uppercase {
 	text-transform: capitalize;
 }
+
 .truncate {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -385,7 +386,6 @@ Animated CSS Buttons, The Laazy Guy, online available at https://dev.to/webdeasy
 	}
 }
 /* 1095px and down */
-
 @media (max-width: 1095px) {
 	.search-bar {
 		margin-left: auto;
@@ -394,6 +394,7 @@ Animated CSS Buttons, The Laazy Guy, online available at https://dev.to/webdeasy
 		margin-right: 0px;
 	}
 }
+
 
 @media (max-height: 1040px) {
 	.sticky-top {
@@ -412,16 +413,13 @@ Animated CSS Buttons, The Laazy Guy, online available at https://dev.to/webdeasy
 		width: 20%;
 		float: right;
 	}
-
 	/* Erweiterung/Anpassung der Bootstrap-Klasse .navbar-nav */
-  
 	.navbar-nav {
 		float: right;
 	}
 	.search-bar {
 		width: 400px;
 	}
-
 	.movie-infos {
 		margin-left: 0px;
 	}

@@ -28,6 +28,7 @@ if (isset($_POST["selector"]) && isset($_POST["validator"])) {
 
     if (pg_num_rows($queryResult) === 1) {
         $row = pg_fetch_assoc($queryResult);
+
         $tokenBinary = hex2bin($validator);
         $checkToken = password_verify($tokenBinary, $row["token"]);
 
@@ -41,7 +42,6 @@ if (isset($_POST["selector"]) && isset($_POST["validator"])) {
                 $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
                 $updatePwd = "UPDATE public.\"Users\" SET password='$hashedPwd' WHERE email='$tokenEmail'";
-
                 pg_query($dbConn, $updatePwd);
 
                 $deleteToken = "DELETE FROM public.\"pwdReset\" WHERE email='$tokenEmail'";

@@ -55,7 +55,6 @@ if (isset($_POST["eMail"]) && isset($_POST["password"])) {
                     header("Location: ../index.php");
                 }
                 
-
                 exit();
             } else {
                 header("Location: ../login.php?error=Incorrect E-Mail or password");

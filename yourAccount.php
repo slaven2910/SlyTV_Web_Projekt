@@ -4,6 +4,7 @@ session_start();
 if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSION["email"])) { ?>
   <!DOCTYPE html>
   <html lang="en">
+
   <?php include('./components/header.php');
   
   $user_name = $_SESSION["username"];
