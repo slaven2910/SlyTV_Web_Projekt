@@ -4,21 +4,17 @@
   <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="container">
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-    <div class="row">
-      <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-      <div class="col text-center">
-        <img src="assets/images/logo-white.png" alt="Your Logo" style="width: 200px;">
-      </div>
-      <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-      
-    </div>
     <div class="row text-center justify-content-center ">
+        <div class="col-3">
+          <img src="assets/images/logo-white.png" alt="Your Logo" style="width: 70px; height:70px">
+        </div>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
         <div class="col-3"><a class="text-white" href="https://github.com/slaven2910/SlyTV_Web_Projekt/blob/main/Legal_Notice_New.txt">Legal stuff</a> </div>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
         <div class="col-3"><a class="text-white" href="https://github.com/slaven2910/SlyTV_Web_Projekt">Github</a></div>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
         <div class="col-3"><a class="text-white" href="">FAQ</a></div>
+        
       </div>
   </div>
   <!-- Zugriff auf die Deklaration des JavaScripts von [Bootstrap 5.2.3]. -->
