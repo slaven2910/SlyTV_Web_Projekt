@@ -52,6 +52,7 @@ function getComments($dbConn, $movie_id) {
     $existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id);
   
     
+    
     if (isset($_POST['comment'])) {
         $comment = $_POST['comment'];
         if(!empty($comment)){
@@ -66,6 +67,8 @@ function getComments($dbConn, $movie_id) {
           ";
         }
     }
+    
+  
     
   
     if (empty($existingRating)) {

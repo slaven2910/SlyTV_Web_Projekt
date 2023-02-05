@@ -3,37 +3,32 @@
 
     <?php include('./components/header.php'); ?>
 
-    <body class="site-background">
-        <!-- Code snippet from: https://mdbootstrap.com/docs/standard/extended/login/#!  -->
-        <div class="container-fluid">
-            <?php include('./components/navbar.php'); ?>
-            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                    <div class="card" style="border-radius: 1rem;">
-                    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                        <div class="card-body p-5 text-center ">
-                            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                            <div class="mb-md-5 mt-md-4 pb-5">
-                                <?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){
-                                    $movie_id = $_GET["movie_id"];
-                                    $_SESSION["redirect_to_movie"] = $movie_id;
-                                    //Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. 
-                                        echo "
-                                        <div class='alert alert-warning alert-dismissible fade show text-center mx-auto mb-3' role='alert'>
-                                            You need to be logged in order to view or post reviews.
-                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                                        </div>
-                                        ";
-                                        }
-                                ?>
-                                <form action="./scripts/login-verification.php<?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){ echo "?movie_id=$movie_id"; } ?>" method="POST">
-                                    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                    <h2 class=" fw-bold mb-2 text-uppercase">Login</h2>
-                                    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                    <p class=" mb-5">Please enter your login and password!</p>
+<body class="site-background">
+    <!-- Code snippet from: https://mdbootstrap.com/docs/standard/extended/login/#!  -->
+    <div class="container-fluid">
+        <?php include('./components/navbar.php'); ?>
+
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center ">
+
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){
+                                $movie_id = $_GET["movie_id"];
+                                $_SESSION["redirect_to_movie"] = $movie_id;
+                                    echo "
+                                    <div class='alert alert-warning alert-dismissible fade show text-center mx-auto mb-3' role='alert'>
+                                        You need to be logged in order to view or post reviews.
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                    </div>
+                                    ";
+                                    }
+                            ?>
+                            <form action="./scripts/login-verification.php<?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){ echo "?movie_id=$movie_id"; } ?>" method="POST">
+
+                                <h2 class="textOnCard fw-bold mb-2 text-uppercase">Login</h2>
+                                <p class="textOnCard mb-5">Please enter your login and password!</p>
 
                                     <?php if (isset($_GET["error"])) { ?>
                                         <!-- alert from https://getbootstrap.com/docs/5.2/components/alerts/ -->
@@ -70,9 +65,10 @@
                 </div>
             </div>
         </div>
-        <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-        <div class="fixed-bottom">
-        <?php include './components/footer.php'; ?>
-        </div>
-    </body>
+    </div>
+    <div class="fixed-bottom">
+    <?php include './components/footer.php'; ?>
+    </div>
+</body>
+
 </html>
