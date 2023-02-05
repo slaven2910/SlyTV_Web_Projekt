@@ -7,6 +7,7 @@ $genre = $movie['genre'];
 $publishing_year = $movie['publishingyear'];
 $plot = $movie['plot'];
 $poster = $movie['image'];
+$actors = $movie['actors'];
 //Get rating data
 $ratings = getMovieRatingAvg($dbConn, $id);
 if ($ratings) {
@@ -31,6 +32,7 @@ if ($ratings) {
         <p>Rating: <strong><?php echo $ratingAvg ?></strong> </p>
         <p>Publishing Year: <strong><?php echo $publishing_year ?></strong></p>
         <p>Genre: <strong><?php echo $genre ?></strong></p>
+        <p>Actors: <strong><?php echo $actors ?></strong></p>
         <p>Plot: <strong><?php echo $plot ?></strong></p>
     </div>
   </div>

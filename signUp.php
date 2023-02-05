@@ -88,7 +88,9 @@
             </div>
         </div>
     </div>
+    <div class="fixed-bottom">
     <?php include './components/footer.php'; ?>
+    </div>
 </body>
 
 </html>

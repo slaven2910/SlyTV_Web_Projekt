@@ -51,13 +51,12 @@ function getComments($dbConn, $movie_id) {
     $user_id = $_POST['user_id'];
     $existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id);
   
-  
+    
     if (isset($_POST['comment'])) {
         $comment = $_POST['comment'];
         if(!empty($comment)){
           $insertComment = "INSERT INTO public.\"movie_comments\"(comment, movie_id, user_id, created_at) VALUES('$comment', '$movie_id', '$user_id', now())";
           $insertCommentResult = pg_query($dbConn, $insertComment);
-          $_SESSION['message'] = "Your comment has been added successfully";
           echo "
           <div class='alert alert-success alert-dismissible fade show text-center mx-auto my-auto' role='alert'>
             Comment added successfully  
@@ -66,6 +65,7 @@ function getComments($dbConn, $movie_id) {
           ";
         }
     }
+    
   
     if (empty($existingRating)) {
         $insert = "INSERT INTO public.\"movie_ratings\"(rating, movie_id, user_id) VALUES('$rate', '$movie_id', '$user_id')";
@@ -86,6 +86,13 @@ function getComments($dbConn, $movie_id) {
       </div>
       ";
     }
+  }else if(!isset($_POST['rate']) && isset($_POST['comment'])){
+    echo "
+        <div class='alert alert-success alert-dismissible fade show text-center mx-auto my-auto' role='alert'>
+          You have to rate the movie in order to post a comment 
+          <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+        </div>
+        ";
   }
   
   //delete a comment

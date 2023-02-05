@@ -6,7 +6,7 @@
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
     <div class="row">
       <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-      <div class="col text-center" style="top:0;">
+      <div class="col text-center">
         <img src="assets/images/logo-white.png" alt="Your Logo" style="width: 200px;">
       </div>
       <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
