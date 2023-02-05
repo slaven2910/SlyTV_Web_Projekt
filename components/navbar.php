@@ -42,6 +42,13 @@
             </a>
           </li>
 
+          <li class="nav-item active ml-auto">
+            <a class="nav-link border border-light " href="create-movie.php">
+              <span>Add a Movie</span>
+              <span class="sr-only"></span>
+            </a>
+          </li>
+
           <?php if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true) {  ?>
             <li class="nav-item ml-3">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,7 +56,6 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-right">
                 <li><a class="dropdown-item" type="button" href="./yourAccount.php">Your Account<span class="sr-only"></a></li>
-                <li><a class="dropdown-item" type="button" href="./create-movie.php">Add a movie<span class=""sr-only></span></a></li>
                 <li><a class="dropdown-item" type="button" href="./scripts/logout.php">Logout<span class="sr-only"></span></a></li>
               </ul>
             </li>

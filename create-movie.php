@@ -13,7 +13,7 @@
 <?php include('./components/navbar.php'); ?>
 <div>
     
-    <form> <!-- action="send-to-database.php" method="POST"> -->
+    <form action="send-to-database.php" method="POST">
     <h2>Add a movie</h2>
     <br>
     <div class="form-outline form-white mb-4">
