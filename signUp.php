@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <?php include("./components/navbar.php"); ?>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-        <div class="mask d-flex align-items-center h-100 gradient-custom-3 p-5">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3 pb-5 mb-5">
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
             <div class="container h-100">
                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->

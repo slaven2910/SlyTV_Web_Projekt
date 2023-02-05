@@ -207,7 +207,9 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
         </div>
       </section>
     </div>
-    <?php include('./components/footer.php') ?>
+    <div class="fixed-bottom">
+    <?php include './components/footer.php'; ?>
+    </div>
   </body>
   </html>
 

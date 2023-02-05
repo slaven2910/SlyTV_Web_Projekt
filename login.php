@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <?php include('./components/navbar.php'); ?>
 
-        <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100 pb-5">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card" style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center ">
