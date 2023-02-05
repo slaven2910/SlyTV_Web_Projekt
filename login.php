@@ -25,7 +25,7 @@
                                     ";
                                     }
                             ?>
-                            <form action="./scripts/login-verification.php?movie_id=<?php echo $movie_id ?>" method="POST">
+                            <form action="./scripts/login-verification.php<?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){ echo "?movie_id=$movie_id"; } ?>" method="POST">
 
                                 <h2 class="textOnCard fw-bold mb-2 text-uppercase">Login</h2>
                                 <p class="textOnCard mb-5">Please enter your login and password!</p>
