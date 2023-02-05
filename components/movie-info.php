@@ -16,6 +16,7 @@ if ($ratings) {
 //Add path to poster
 $image = ".assets/images/" . $poster;
 
+
 echo "
 <section class='mb-5'>
 <div class='well'>
