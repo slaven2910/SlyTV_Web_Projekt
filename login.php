@@ -29,7 +29,7 @@
                                         ";
                                         }
                                 ?>
-                                <form action="./scripts/login-verification.php<?php if($movie_id){ echo "?movie_id=$movie_id"; } ?>" method="POST">
+                                <form action="./scripts/login-verification.php<?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){ echo "?movie_id=$movie_id"; } ?>" method="POST">
                                     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                     <h2 class=" fw-bold mb-2 text-uppercase">Login</h2>
                                     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
