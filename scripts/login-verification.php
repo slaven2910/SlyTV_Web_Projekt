@@ -48,8 +48,14 @@ if (isset($_POST["eMail"]) && isset($_POST["password"])) {
                 $_SESSION["email"] = $row["email"];
                 $_SESSION["username"] = $row["username"];
                 $_SESSION["logged_in"] = true;
+                $movie_id = $_GET["movie_id"];
+                if($movie_id){
+                    header("Location: ../movie-reviews.php?movie_id=$movie_id");
+                }else{
+                    header("Location: ../index.php");
+                }
                 
-                header("Location: ../index.php");
+
                 exit();
             } else {
                 header("Location: ../login.php?error=Incorrect E-Mail or password");

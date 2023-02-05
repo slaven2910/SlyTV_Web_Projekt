@@ -7,34 +7,35 @@ $genre = $movie['genre'];
 $publishing_year = $movie['publishingyear'];
 $plot = $movie['plot'];
 $poster = $movie['image'];
+$actors = $movie['actors'];
 //Get rating data
 $ratings = getMovieRatingAvg($dbConn, $id);
 if ($ratings) {
   $ratingAvg = round($ratings['avg_rating'], 2);
 }
 
-//Add path to poster
-$image = ".assets/images/" . $poster;
-
-
-echo "
+?>
+<!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <section class='mb-5'>
+  <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <div class='well'>
+  <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class='row justify-content-center'>
-    <div class='col-md-4'>
-        <img class='thumbnail d-block poster' src=$image alt='Card image cap'>
+    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+    <div class='col-lg-4'>
+      <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+        <img class='thumbnail d-block poster' src='./assets/images/moviePlaceholder.jpg' alt='Card image cap'>
     </div>
-    <div class='col-md-4 movie-infos align-self-center'>
-        <p>Title: <strong>$title</strong></p>
-        <p>Rating: <strong>$ratingAvg</strong> </p>
-        <p>Publishing Year: <strong>$publishing_year</strong></p>
-        <p>Genre: <strong>$genre</strong></p>
-        <p>Plot: <strong>$plot</strong></p>
+    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+    <div class='col-lg-4 movie-infos align-self-center'>
+        <p>Title: <strong><?php echo $title ?></strong></p>
+        <p>Rating: <strong><?php echo $ratingAvg ?></strong> </p>
+        <p>Publishing Year: <strong><?php echo $publishing_year ?></strong></p>
+        <p>Genre: <strong><?php echo $genre ?></strong></p>
+        <p>Actors: <strong><?php echo $actors ?></strong></p>
+        <p>Plot: <strong><?php echo $plot ?></strong></p>
     </div>
   </div>
 
 </div>
 </section>
-
-"
-?>
