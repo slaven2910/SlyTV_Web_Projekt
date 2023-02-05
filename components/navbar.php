@@ -44,7 +44,15 @@
               <span class="sr-only"></span>
             </a>
           </li>
-
+          <?php if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == true) {  ?>
+          <li class="nav-item active ml-auto">
+            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+            <a class="nav-link border border-light text-right mr-5" href="create-movie.php">
+              <span>Add a Movies</span>
+              <span class="sr-only"></span>
+            </a>
+          </li>
+          <?php } ?>
           <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
           <div class="vr mx-3"></div>
 
