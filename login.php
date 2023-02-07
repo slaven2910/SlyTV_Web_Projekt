@@ -17,7 +17,6 @@
                         <div class="mb-md-5 mt-md-4 pb-5">
                             <?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){
                                 $movie_id = $_GET["movie_id"];
-                                $_SESSION["redirect_to_movie"] = $movie_id;
                                     echo "
                                     <div class='alert alert-warning alert-dismissible fade show text-center mx-auto mb-3' role='alert'>
                                         You need to be logged in order to view or post reviews.

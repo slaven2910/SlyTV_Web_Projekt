@@ -13,6 +13,7 @@
     </div>
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
     <div class="card-footer text-center mb-4">
+      <!-- Bezugnahme auf Design-Elemente von [Animated CSS Buttons]. -->
       <div class="button-wrapper">
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
       <a class="btn btn-sm bg-primary uppercase" href="movie-reviews.php?movie_id=<?php echo $movieId; ?>"> <span class="add-review-button">Add a review</span></a>

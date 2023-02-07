@@ -2,7 +2,6 @@
 include 'connect.php';
 
 // Get movies from the database
-
 function getMovies($dbConn){
     try{
         $showMoviesQuery = "SELECT * FROM public.\"Movies\"";
@@ -13,9 +12,8 @@ function getMovies($dbConn){
         echo $e->getMessage();
     }
   }
-  
+
   // Get a single movie from the database
-  
   function getMovie($dbConn,$id) {
     try {
         $movieQuery = "SELECT * FROM public.\"Movies\" WHERE id=$id";
@@ -28,11 +26,9 @@ function getMovies($dbConn){
   }
   
   // Search movies
-  
   function searchMovies($dbConn, $search_term){
     $searchQuery = "SELECT * FROM public.\"Movies\" WHERE title ILIKE $1 LIMIT 10";
     $queryResult = pg_query_params($dbConn, $searchQuery, array("%" . $search_term . "%"));
-  
     if (!$queryResult) {
         $error = pg_last_error($dbConn);
         throw new Exception("Search query failed: $error");

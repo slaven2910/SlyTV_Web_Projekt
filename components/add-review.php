@@ -1,21 +1,8 @@
 <?php 
-// Start output buffering
-ob_start();
-
-// Check if user is logged in
-if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] != true){
-    // user is not logged in
-    // redirect user to login page
-    header("Location: /login.php");
-    exit;
-}
-
 // Get user_id and movie_id
 $user_id = $_SESSION["user_id"];
 $movie_id = $_GET["movie_id"];
 $existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id);
-// Flush output buffer
-ob_end_flush();
 ?>
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <section class="text-center">
@@ -26,6 +13,7 @@ ob_end_flush();
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="row">
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+    <!-- Bezugnahme auf Design-Elemente von [Five Star Rating]. -->
   <div class="rate mx-auto">
   <input type="radio" id="star5" name="rate" value="5" <?php if ($existingRating && $existingRating['rating'] == 5) { echo 'checked'; } ?> />
   <label for="star5" title="text">5 stars</label>
