@@ -42,8 +42,10 @@ if (isset($_POST["eMail"]) && isset($_POST["password"])) {
                 $movie_id = $_GET["movie_id"];
                 if ($movie_id) {
                     header("Location: ../movie-reviews.php?movie_id=$movie_id");
+                    exit();
                 } else {
                     header("Location: ../index.php");
+                    exit();
                 }
 
                 exit();
