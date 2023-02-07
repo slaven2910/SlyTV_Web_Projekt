@@ -67,8 +67,6 @@ include('./scripts/movie.php');
                 </div>
             </section>
         </div>
-        <div class="fixed-bottom">
         <?php include './components/footer.php'; ?>
-        </div>           
     </body>
 </html>
