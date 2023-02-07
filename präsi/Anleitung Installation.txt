@@ -1,7 +1,7 @@
 folgende extensions müssen an der php.ini-Datei:
 	- openssl extension auskommentieren
 	- pg_... extension auskommentieren
-	- 
+	...
 
 Datenbank: 
 	- neue Datenbank erstellen
@@ -13,3 +13,6 @@ Datenbank:
 		- (beim Tab Data/Objects) Pre-data, Data, Owner und Privilege anschalten
 		- (beim Tab Options) Clean before restore anschalten
 	- Datenbankinformationen in der Datei SlyTV_Web_Projekt\scripts\db-credentials.php ändern
+	...
+
+Weitere Schritte...

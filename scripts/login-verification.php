@@ -9,6 +9,7 @@ if (!$dbConn) {
 
 if (isset($_POST["eMail"]) && isset($_POST["password"])) {
 
+    // removes unnecessary data and prevents cross-site scripting / character escape
     function validate($data)
     {
         $data = trim($data);
@@ -24,7 +25,8 @@ if (isset($_POST["eMail"]) && isset($_POST["password"])) {
         header("Location: ../login.php?error=E-Mail is required");
         exit();
     } else if (empty($pwd)) {
-        header("Location: ../login.php?error=Password is required");
+        // keeps the typed in email in the input field
+        header("Location: ../login.php?error=Password is required&email=$eMail");
         exit();
     } else {
         $query = "SELECT * FROM public.\"Users\" WHERE email='$eMail'";
@@ -51,11 +53,11 @@ if (isset($_POST["eMail"]) && isset($_POST["password"])) {
 
                 exit();
             } else {
-                header("Location: ../login.php?error=Incorrect E-Mail or password");
+                header("Location: ../login.php?error=Incorrect E-Mail or password&&email=$eMail");
                 exit();
             }
         } else {
-            header("Location: ../login.php?error=Either E-Mail or password is incorrect");
+            header("Location: ../login.php?error=Either E-Mail or password is incorrect&email=$eMail");
             exit();
         }
     }
