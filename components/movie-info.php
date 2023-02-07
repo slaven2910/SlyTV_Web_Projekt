@@ -25,7 +25,7 @@ if ($ratings && $ratings['avg_rating'] != null) {
       <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
       <div class='col-lg-4'>
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-          <img class='thumbnail d-block poster mt-5' src='$poster' alt='Card image cap'>
+          <img class='thumbnail d-block poster mt-5' src='<?php $path="./assets/images/"; echo $path . $poster?>' alt='Card image cap'>
       </div>
       <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
       <div class='col-lg-4 movie-infos align-self-center'>
