@@ -12,8 +12,8 @@
     if (empty($selector) || empty($validator)) {
         echo "Could not validate your request!";
     } else {
-        if (ctype_xdigit($selector) && ctype_xdigit($validator)) {
-    ?>      <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+        if (ctype_xdigit($selector) && ctype_xdigit($validator)) { ?>
+            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
             <div class="container py-5 h-100">
                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -21,7 +21,7 @@
                     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                         <div class="card bg-dark text-white" style="border-radius: 1rem;">
-                        <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+                            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                             <div class="card-body p-5 text-center">
                                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                 <div class="mt-md-4 pb-5">
@@ -61,7 +61,7 @@
                                             <label class="form-label" for="pwd-repeat">Repeat New Password</label>
                                         </div>
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                        <button type="submit" class="btn btn-outline-light btn-lg px-5 w-100">reset password</button> 
+                                        <button type="submit" class="btn btn-outline-light btn-lg px-5 w-100">reset password</button>
                                     </form>
                                 </div>
                             </div>
@@ -69,16 +69,13 @@
                     </div>
                 </div>
             </div>
-
     <?php
         }
     } ?>
-    
+
     <div class="fixed-bottom">
-    <?php include './components/footer.php'; ?>
+        <?php include './components/footer.php'; ?>
     </div>
-
-
 </body>
 
 </html>

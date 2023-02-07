@@ -2,12 +2,6 @@
 include 'connect.php';
 session_start();
 
-if (!$dbConn) {
-  echo "Ein Fehler ist aufgetreten.\n";
-  exit;
-}
-
-
 if (isset($_POST["username"]) && isset($_POST["eMail"]) && isset($_POST["password"]) && isset($_POST["pwd-repeat"])) {
 
     // removes unnecessary data and prevents cross-site scripting / character escape

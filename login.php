@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <?php include('./components/header.php'); ?>
+<?php include('./components/header.php'); ?>
 
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <body class="site-background">
