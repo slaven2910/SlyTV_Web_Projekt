@@ -3,6 +3,7 @@
 
     <?php include('./components/header.php'); ?>
 
+<!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
 <body class="site-background">
     <!-- Code snippet from: https://mdbootstrap.com/docs/standard/extended/login/#!  -->
     <div class="container-fluid">
@@ -25,7 +26,8 @@
                                     ";
                                     }
                             ?>
-                            <form action="./scripts/login-verification.php<?php if(isset($_GET["message"]) && $_GET["message"] == "login_required_to_post_reviews"){ echo "?movie_id=$movie_id"; } ?>" method="POST">
+                            <form action="./scripts/login-verification.php<?php if(isset($_GET["message"]) && $_GET["message"] == 
+                                "login_required_to_post_reviews"){ echo "?movie_id=$movie_id"; } ?>" method="POST">
 
                                 <h2 class="textOnCard fw-bold mb-2 text-uppercase">Login</h2>
                                 <p class="textOnCard mb-5">Please enter your login and password!</p>
@@ -36,19 +38,32 @@
                                             <?php echo $_GET["error"]; ?>
                                         </div>
                                     <?php } ?>
-                                    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                    <div class="form-outline form-white mb-4">
+
+                                    <?php if (isset($_GET["email"])) { ?>
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                        <input type="email" id="typeEmailX" name="eMail" class="form-control form-control-lg " />
+                                        <div class="form-outline form-white mb-4">
+                                            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+                                            <input type="email" id="typeEmailX" name="eMail" class="form-control form-control-lg " 
+                                                value="<?php echo $_GET["email"]; ?>" />
+                                            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+                                            <label class="form-label" for="typeEmailX">Email</label>
+                                        </div>
+                                    <?php } else { ?>
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                        <label class="form-label " for="typeEmailX">Email</label>
-                                    </div>
+                                        <div class="form-outline form-white mb-4">
+                                            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+                                            <input type="email" id="typeEmailX" name="eMail" class="form-control form-control-lg " />
+                                            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+                                            <label class="form-label" for="typeEmailX">Email</label>
+                                        </div>
+                                    <?php } ?>
+
                                     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                     <div class="form-outline form-white mb-4">
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                         <input type="password" id="typePasswordX" name="password" class="form-control form-control-lg " />
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                        <label class="form-label " for="typePasswordX">Password</label>
+                                        <label class="form-label" for="typePasswordX">Password</label>
                                     </div>
                                     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                     <p class="small mb-5 pb-lg-2 "><a href="passwordReset.php" class="text-body">Forgot password?</a></p>
@@ -66,6 +81,7 @@
             </div>
         </div>
     </div>
+    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
     <div class="fixed-bottom">
     <?php include './components/footer.php'; ?>
     </div>

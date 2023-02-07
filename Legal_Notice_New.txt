@@ -82,6 +82,14 @@ REFERENCES
      [Font Awesome v5.15.3 (https://fontawesome.com),
      Copyright 2022 Font Awesome, Inc.,
      Licensed under MIT (https://fontawesome.com/license/free).]
+   [PHP Mailer 6.7.1] Marcus Bointon / Jim Jagielski / Andy Prevost /
+      Brent R. Matzelle (2023): The PHPMailer GitHub project.
+      Copyright 2012 - 2020 Marcus Bointon,
+      Copyright 2010 - 2012 Jim Jagielski,
+      Copyright 2004 - 2009 Andy Prevost.
+      Online available at URL: https://github.com/PHPMailer/PHPMailer, 
+      accessed 2023-JAN-21
+      Licensed under GNU Lesser General Public License. ]
 
 REMARKS
 
