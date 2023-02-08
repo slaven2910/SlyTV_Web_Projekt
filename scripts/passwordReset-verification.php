@@ -35,7 +35,6 @@ if (isset($_POST["eMail"])) {
             // token to pinpoint other token of the user for security reasons
             $token = random_bytes(32);
 
-            // TODO: example url to get to the password reset page while Apache server is running
             $url = "http://localhost/SlyTV_Web_Projekt/password-change.php?selector=$selector&validator=" . bin2hex($token);
 
             // datetime right now + 450 seconds (20 min)
@@ -51,7 +50,7 @@ if (isset($_POST["eMail"])) {
                 Values ('$eMail', '$selector', '$hashedToken', '$expires')";
             pg_query($dbConn, $insert);
 
-            // change to mail($to, $subject, $message, $header); when on webserver
+            // would be changed to mail($to, $subject, $message, $header); when on webserver
             // PHPMailer from: https://github.com/PHPMailer/PHPMailer
             // code from: https://www.codexworld.com/how-to-send-email-from-localhost-in-php/
             $mail = new PHPMailer;

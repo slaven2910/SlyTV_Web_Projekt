@@ -6,3 +6,4 @@ Datenbank:
 		- Format: custom or tar
 		- (beim Tab Data/Objects) Pre-data, Data, Owner und Privilege anschalten
 	- Datenbankinformationen in der Datei SlyTV_Web_Projekt\scripts\db-credentials.php ändern
+	- restore könnte fehlschlagen, da hilft meist ein weiterer versuch

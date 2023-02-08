@@ -2,7 +2,7 @@
 //DB-Credientials 
 $host = "localhost";
 $port = "5432";
-$db = "LatestSlyTv";
+$db = "SlyTV";
 $user = "postgres";
-$pw = "aspire938";
+$pw = "1234";
 ?>

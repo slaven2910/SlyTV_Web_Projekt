@@ -48,14 +48,7 @@
           <li class="nav-item active ml-auto">
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
             <a class="nav-link border border-light text-right mr-5" href="create-movie.php">
-              <span>Add a Movies</span>
-              <span class="sr-only"></span>
-            </a>
-          </li>
-          <li class="nav-item active ml-auto">
-            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-            <a class="nav-link border border-light text-right mr-5" href="delete-movie.php">
-              <span>Delete movies</span>
+              <span>Add a Movie</span>
               <span class="sr-only"></span>
             </a>
           </li>
@@ -74,7 +67,9 @@
               <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
               <ul class="dropdown-menu dropdown-menu-end">
                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                <li><a class="dropdown-item"  href="./yourAccount.php">Your Account<span class="sr-only"></span></a></li>
+                <li><a class="dropdown-item"  href="./yourAccount.php">Your Reviews<span class="sr-only"></span></a></li>
+                <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+                <li><a class="dropdown-item"  href="./delete-movie.php">Your Movies<span class="sr-only"></span></a></li>
                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                 <li><a class="dropdown-item" href="./scripts/logout.php">Logout<span class="sr-only"></span></a></li>
               </ul>
