@@ -21,7 +21,7 @@
           echo "<form method='post'>";
         } ?>
         <input type="hidden" name="movie_id" value="<?php echo $movieId ?>">
-      <button  class="btn btn-sm bg-primary uppercase"
+      <<?php if (!strpos($_SERVER['REQUEST_URI'], 'index.php') === false){echo "a class='btn btn-sm bg-primary uppercase'";}else echo "button class='btn btn-sm bg-primary text-white uppercase'"; ?>
          <?php if (!strpos($_SERVER['REQUEST_URI'], 'index.php') === false){echo "href='movie-reviews.php?movie_id=$movieId'";}
                      else{echo "name='delete_movie' type='submit'";}
                ?>> 
@@ -30,7 +30,7 @@
                 else{ echo "Delete this movie";}
           ?>
         </span>
-      </button >
+      <<?php if (!strpos($_SERVER['REQUEST_URI'], 'index.php') === false){echo "/a";}else echo "/button"; ?> >
         <?php 
           if (!strpos($_SERVER['REQUEST_URI'], 'delete-movie.php') === false){
             echo "</form>";
