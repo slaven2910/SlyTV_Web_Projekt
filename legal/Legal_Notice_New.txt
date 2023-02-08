@@ -71,7 +71,6 @@ REFERENCES
      Version 5.2.3. Bootstrap is released under the MIT license 
      and is copyright 2022 Twitter. Online available at
      URL: https://getbootstrap.com/, accessed 2023-FEB-01.
-     URL: https://getbootstrap.com/, accessed 2023-FEB-01.
      [Bootstrap v5.2.3 (https://getbootstrap.com/), 
      Copyright 2011-2022 The Bootstrap Authors, 
      Copyright 2011-2022 Twitter, Inc., 
@@ -82,14 +81,12 @@ REFERENCES
      URL: https://fontawesome.com, accessed 2023-FEB-01.
      [Font Awesome v5.15.3 (https://fontawesome.com),
      Copyright 2022 Fonticons, Inc.,
-     Copyright 2022 Fonticons, Inc.,
      Licensed under MIT (https://fontawesome.com/license/free).]
   [JQuery 3.5.1] OpenJS Foundation and jQuery contributors (2022): "JQuery".
      Version 3.5.1. slim
      Online available on the website of jqeury.com at URL: https://code.jquery.com/jquery-3.5.1.slim.min.js,
      accessed 2023-FEB-01.
      [JQuery v3.5.1 (https://code.jquery.com/jquery-3.5.1.slim.min.js),
-     Copyright 2023 OpenJS Foundation and jQuery contributors,
      Copyright 2023 OpenJS Foundation and jQuery contributors,
      Licensed under MIT (https://jquery.org/license).]
   [@thelaazyguy, Css Button Hover #2 - Background], Author unbekannt(pseudonym: @thelaazyguy) (2017):
@@ -123,3 +120,36 @@ REMARKS
   the used Five Star Rating, obtained from the URL
   https://codepen.io/hesguru/details/BaybqXv
   accessed on February 1st 2023.
+
+IMAGES
+All images are from the same website https://www.themoviedb.org/
+For readability reasons we have renamed the original files 
+in the following the new name of the file is displayed in parentheses after each link
+https://www.themoviedb.org/t/p/original/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg (Avatar.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/yu26pJwGFUyqTJWMWo1mMgBFJ0N.jpg (Forrest-Gump.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/8IB2e4r4oVhHnANbnm7O3Tj6tF8.jpg (Inception.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg (Interstellar.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/lxM6kqilAdpdhqUl2biYp5frUxE.jpg (Jaws.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/z9abTHTUSRVktz9T12sqLJDUwaV.jpg (Pacific-Rim.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/fIE3lAGcZDV1G6XM5KmuWnNsPp1.jpg (Pulp-Fiction.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/eP5NL7ZlGoW9tE9qnCdHpOLH1Ke.jpg (The-Dark-Knight.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/3Tf8vXykYhzHdT0BtsYTp570JGQ.jpg (The-Godfather.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg (The-Lion-King.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg (The-Matrix.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/pVHyB857pFAl9pBgOGzWTChPwlK.jpg (The-Shawshank-Redemption.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg (The-Silence-of-the-Lambs.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/5bTWA20cL9LCIGNpde4Epc2Ijzn.jpg (Titanic.jpg)
+accessed on January 31st 2023
