@@ -1,16 +1,20 @@
 <?php
 include '../scripts/connect.php';
 
-if (!$dbConn) {
-    echo "Ein Fehler ist aufgetreten.\n";
-    exit;
+// removes unnecessary data and prevents cross-site scripting / character escape
+function validate($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 
-$title = $_POST["title"];
-$publishingyear = $_POST["publishingyear"];
-$genre = $_POST["genre"];
-$plot = $_POST["plot"];
-$actors = $_POST["actors"];
+$title = validate($_POST["title"]);
+$publishingyear = validate($_POST["publishingyear"]);
+$genre = validate($_POST["genre"]);
+$plot = validate($_POST["plot"]);
+$actors = validate($_POST["actors"]);
 
 //save useradata to give it back if image is not the right format
 $userdata = "title=" . $title . "&publishingyear=" . $publishingyear . "&genre=" . $genre . "&plot=" . $plot . "&actors=" . $actors;
@@ -25,7 +29,7 @@ if(
     $filetype != "image/png" 
 ){
     echo "Sorry this file type is not supported";
-    header("Location: ../create-movie.php?error=file_format_is_not_supported&$userdata");
+    header("Location: ../create-movie.php?error=file format is not supported&$userdata");
     exit;
 }
 
@@ -54,7 +58,7 @@ if($queryResult){
     header("Location: ../movie-reviews.php?movie_id=$id");
     exit();
 } else  {
-    header("Location: ../create-movie.php?error=php-insert-failed&$userdata");
+    header("Location: ../create-movie.php?error=some information you typed in was not valid&$userdata");
     exit();
 }
 ?>

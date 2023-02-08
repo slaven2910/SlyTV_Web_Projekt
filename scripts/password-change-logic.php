@@ -58,7 +58,7 @@ if (isset($_POST["selector"]) && isset($_POST["validator"])) {
             exit();
         }
     } else {
-        header("Location: ../passwordReset.php?error=token expired");
+        header("Location: ../passwordReset.php?error=token expired! Try sending another request");
         exit();
     }
 }
