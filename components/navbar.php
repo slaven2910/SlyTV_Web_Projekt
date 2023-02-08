@@ -90,7 +90,9 @@
       </div>
     </nav>
   </section>
+  <!-- Zugriff auf die Deklaration des Designs von [Font Awesome 5.15.3]. -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- Zugriff auf die Deklaration des Designs von [JQuery 3.5.1 Slim]. -->
   <script src="https://use.fontawesome.com/22109dfc6e.js"></script>
 </body>
 

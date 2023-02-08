@@ -13,7 +13,7 @@ $existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id);
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
   <div class="row">
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-    <!-- Bezugnahme auf Design-Elemente von [Five Star Rating]. -->
+    <!-- Bezugnahme auf Design-Elemente von [@allenhe, 5 star rating with css and html]. -->
   <div class="rate mx-auto">
   <input type="radio" id="star5" name="rate" value="5" <?php if ($existingRating && $existingRating['rating'] == 5) { echo 'checked'; } ?> />
   <label for="star5" title="text">5 stars</label>

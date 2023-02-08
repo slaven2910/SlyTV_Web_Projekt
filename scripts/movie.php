@@ -1,5 +1,6 @@
 <?php
 include 'connect.php';
+include 'validate.php';
 
 // Get movies from the database
 function getMovies($dbConn){

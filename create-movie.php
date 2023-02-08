@@ -20,8 +20,9 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] != true) {
         <?php include('./components/navbar.php'); ?>
         <div class="row d-flex justify-content-center align-items-center h-100 pb-5">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card" style="border-radius: 1rem;">
+                <div class="card " style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center ">
+                        <div class="align-items-left">
                         <form action="scripts/create-movie-verification.php" method="POST" enctype="multipart/form-data">
                             <h2 class="textOnCard fw-bold mb-2 text-uppercase">Add a Movie</h2>
                             <p class="textOnCard mb-5">Please enter the needed information!</p>
@@ -108,6 +109,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] != true) {
                             </div>
                             <input type="submit" value="Submit">
                         </form>
+                        </div>
                     </div>
                 </div>
             </div>

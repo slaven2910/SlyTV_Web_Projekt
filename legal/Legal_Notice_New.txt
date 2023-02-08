@@ -82,22 +82,24 @@ REFERENCES
      [Font Awesome v5.15.3 (https://fontawesome.com),
      Copyright 2022 Fonticons, Inc.,
      Licensed under MIT (https://fontawesome.com/license/free).]
-  [JQuery 3.5.1 Slim] OpenJS Foundation and jQuery contributors. (2022): "JQuery".
-     Version 3.5.1. JQuery is released under the MIT License.
-     Online available at URL: https://code.jquery.com/jquery-3.5.1.slim.min.js,
+  [JQuery 3.5.1] OpenJS Foundation and jQuery contributors (2022): "JQuery".
+     Version 3.5.1. slim
+     Online available on the website of jqeury.com at URL: https://code.jquery.com/jquery-3.5.1.slim.min.js,
      accessed 2023-FEB-01.
      [JQuery v3.5.1 (https://code.jquery.com/jquery-3.5.1.slim.min.js),
      Copyright 2023 OpenJS Foundation and jQuery contributors,
      Licensed under MIT (https://jquery.org/license).]
-  [Animated CSS Buttons], The Laazy Guy.
-     Online available at
-     URL: https://codepen.io/thelaazyguy/pen/brryVq accessed 2023-FEB-01.
-     [Animated CSS Buttons, The Laazy Guy,
+  [@thelaazyguy, Css Button Hover #2 - Background], Author unbekannt(pseudonym: @thelaazyguy) (2017):
+     Online available on the website of https://codepen.io/ at
+     URL: https://codepen.io/thelaazyguy/pen/brryVq 
+     accessed 2023-FEB-01.
+     [@thelaazyguy, Css Button Hover #2 - Background
      Licensed under MIT (https://codepen.io/thelaazyguy/details/brryVq)]
-  [Five Star Rating], allenhe.
-     Online available at
-     URL: https://codepen.io/hesguru/pen/BaybqXv accessed 2023-FEB-01.
-     [Five Star Rating, allenhe,
+  [@allenhe, 5 star rating with css and html], Author unbekannt(pseudonym: @thelaazyguy)
+     Online available on the website of https://codepen.io/ at
+     URL: https://codepen.io/hesguru/pen/BaybqXv 
+     accessed 2023-FEB-01.
+     [@allenhe, 5 star rating with css and html
      Licensed under MIT (https://codepen.io/hesguru/details/BaybqXv)]
 
 REMARKS
