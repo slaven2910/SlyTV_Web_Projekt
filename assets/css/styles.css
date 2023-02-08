@@ -212,9 +212,9 @@ button:hover {
 
 /* movie-card */
 
-.movie-image-placeholder {
+.movie-card-image {
 	background-position: center center;
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
 	height: 280px;
 	border-bottom-left-radius: 0;
