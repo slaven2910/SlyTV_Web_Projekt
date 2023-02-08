@@ -3,7 +3,9 @@
 
 <?php include('./components/header.php'); ?>
 
-<body>
+<!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+
+<body class="site-background">
 
     <?php
     $selector = $_GET["selector"];
@@ -14,13 +16,14 @@
     } else {
         if (ctype_xdigit($selector) && ctype_xdigit($validator)) { ?>
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-            <div class="container py-5 h-100">
+            <div class="container-fluid">
+                <?php include('./components/navbar.php'); ?>
                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card" style="border-radius: 1rem;">
                             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                             <div class="card-body p-5 text-center">
                                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -32,7 +35,7 @@
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                         <h2 class="fw-bold mb-2 text-uppercase">Reset Password</h2>
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                        <p class="text-white-50 mb-5">here you can type in your new password</p>
+                                        <p class="mb-5">here you can type in your new password</p>
                                         <?php if (isset($_GET["error"])) { ?>
                                             <!-- alert from https://getbootstrap.com/docs/5.2/components/alerts/ -->
                                             <div class="alert alert-danger" role="alert">
@@ -47,21 +50,21 @@
                                             </div>
                                         <?php } ?>
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                        <div class="form-outline form-white mb-4">
+                                        <div class="form-outline mb-4">
                                             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                             <input type="password" name="password" class="form-control form-control-lg" />
                                             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                             <label class="form-label" for="password">New Password</label>
                                         </div>
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                        <div class="form-outline form-white mb-4">
+                                        <div class="form-outline mb-4">
                                             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                             <input type="password" name="pwd-repeat" class="form-control form-control-lg" />
                                             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                                             <label class="form-label" for="pwd-repeat">Repeat New Password</label>
                                         </div>
                                         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                        <button type="submit" class="btn btn-outline-light btn-lg px-5 w-100">reset password</button>
+                                        <button type="submit" class="btn btn-outline-danger btn-lg px-5 w-100">reset password</button>
                                     </form>
                                 </div>
                             </div>

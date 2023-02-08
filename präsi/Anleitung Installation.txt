@@ -1,18 +1,8 @@
 folgende extensions müssen an der php.ini-Datei:
 	- openssl extension auskommentieren
-	- pg_... extension auskommentieren
-	...
 
 Datenbank: 
-	- neue Datenbank erstellen
-	- Datenbankname: SlyTV
-	- Datenbankbackup von SlyTV erstellen: 
+	- Datenbankbackup mit der Datei SlyTV_Web_Projekt/DB/SlyTVDatabase.sql erstellen:
 		- Format: custom or tar
-		- Filename: SlyTV_Web_Projekt\DB\SlyTVDatabase
-		- Role name: postgres
 		- (beim Tab Data/Objects) Pre-data, Data, Owner und Privilege anschalten
-		- (beim Tab Options) Clean before restore anschalten
 	- Datenbankinformationen in der Datei SlyTV_Web_Projekt\scripts\db-credentials.php ändern
-	...
-
-Weitere Schritte...

@@ -1,3 +1,0 @@
-Quelle: https://github.com/PHPMailer/PHPMailer
-
-Wichtig: Add ext-openssl to composer suggest list
