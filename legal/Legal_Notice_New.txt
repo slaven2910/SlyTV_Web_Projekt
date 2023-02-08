@@ -19,6 +19,7 @@ LEGAL NOTICE
   as parts of this project. 
 
   The project uses elements of [Bootstrap 5.2.3], [Font Awesome 5.15.3], [Animated CSS Buttons] and [Five Star Rating].
+  The project uses elements of [Bootstrap 5.2.3], [Font Awesome 5.15.3], [Animated CSS Buttons] and [Five Star Rating].
   Furthermore basic functionalities of the operating system
   Microsoft Windows 10 (Version 10.0.19044.2251) were used
   in order to create this project. Especially the functionality 
@@ -28,6 +29,7 @@ LICENSE OF THIS PROJECT
 
   This license bases on [bsd-3] with fundamental modifications:
 
+  Copyright 2022 Slaven Mlinaric, Leon Rausch, Yannick Diehl, IU University of Applied Sciences, 
   Copyright 2022 Slaven Mlinaric, Leon Rausch, Yannick Diehl, IU University of Applied Sciences, 
   Darmstädter Landstraße 110, 60598 Frankfurt am Main, Germany
 
@@ -71,6 +73,7 @@ REFERENCES
      Version 5.2.3. Bootstrap is released under the MIT license 
      and is copyright 2022 Twitter. Online available at
      URL: https://getbootstrap.com/, accessed 2023-FEB-01.
+     URL: https://getbootstrap.com/, accessed 2023-FEB-01.
      [Bootstrap v5.2.3 (https://getbootstrap.com/), 
      Copyright 2011-2022 The Bootstrap Authors, 
      Copyright 2011-2022 Twitter, Inc., 
@@ -79,7 +82,11 @@ REFERENCES
   [Font Awesome 5.15.3]  Fonticons, Inc. (2022): "Font Awesome".
      Version 5.15.3. Online available at
      URL: https://fontawesome.com, accessed 2023-FEB-01.
+  [Font Awesome 5.15.3]  Fonticons, Inc. (2022): "Font Awesome".
+     Version 5.15.3. Online available at
+     URL: https://fontawesome.com, accessed 2023-FEB-01.
      [Font Awesome v5.15.3 (https://fontawesome.com),
+     Copyright 2022 Fonticons, Inc.,
      Copyright 2022 Fonticons, Inc.,
      Licensed under MIT (https://fontawesome.com/license/free).]
   [JQuery 3.5.1] OpenJS Foundation and jQuery contributors (2022): "JQuery".
@@ -87,6 +94,7 @@ REFERENCES
      Online available on the website of jqeury.com at URL: https://code.jquery.com/jquery-3.5.1.slim.min.js,
      accessed 2023-FEB-01.
      [JQuery v3.5.1 (https://code.jquery.com/jquery-3.5.1.slim.min.js),
+     Copyright 2023 OpenJS Foundation and jQuery contributors,
      Copyright 2023 OpenJS Foundation and jQuery contributors,
      Licensed under MIT (https://jquery.org/license).]
   [@thelaazyguy, Css Button Hover #2 - Background], Author unbekannt(pseudonym: @thelaazyguy) (2017):
