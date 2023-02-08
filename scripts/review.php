@@ -1,6 +1,15 @@
 <?php
 include 'connect.php';
-include 'validate.php';
+
+function validate($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    $_SESSION["validation_activated"] = true;
+    return $data;
+}
+
 
 // Get comments from the database
 function getComments($dbConn, $movie_id) {

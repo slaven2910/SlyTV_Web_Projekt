@@ -18,7 +18,7 @@ include('./scripts/movie.php');
 
                     <?php
                     if (isset($_POST['search_term'])) {
-                        $search_term = validate($_POST['search_term']);
+                        $search_term = $_POST['search_term'];
                         $movies = searchMovies($dbConn, $search_term);
                         if(count($movies) == 0){
                             // Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. 

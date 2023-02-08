@@ -15,6 +15,7 @@ $publishingyear = validate($_POST["publishingyear"]);
 $genre = validate($_POST["genre"]);
 $plot = validate($_POST["plot"]);
 $actors = validate($_POST["actors"]);
+$user_id = $_SESSION['user_id'];
 
 //save useradata to give it back if image is not the right format
 $userdata = "title=" . $title . "&publishingyear=" . $publishingyear . "&genre=" . $genre . "&plot=" . $plot . "&actors=" . $actors;
@@ -51,7 +52,7 @@ $id = 1 + pg_num_rows($rowtable);
 
 
 // SQL statement to add movie to the database
-$statement = "INSERT INTO public.\"Movies\" (id, title, genre, publishingyear, plot, image, actors) VALUES ($id, '$title', '$genre', $publishingyear, '$plot', '$newfilename', '$actors')";
+$statement = "INSERT INTO public.\"Movies\" (id, title, genre, publishingyear, plot, image, actors, user_id) VALUES ($id, '$title', '$genre', $publishingyear, '$plot', '$newfilename', '$actors', '$user_id')";
 $queryResult = pg_query($dbConn, $statement);
 
 if($queryResult){

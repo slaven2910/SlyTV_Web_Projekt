@@ -15,4 +15,6 @@ if (!$dbConn) {
   echo "Ein Fehler ist aufgetreten.\n";
   exit;
 }
+
+
 ?>

@@ -8,7 +8,7 @@
     <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
     <div class="card-body d-flex flex-column text-center">
       <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-      <h5 class="card-title truncate"> <?php echo $title; ?> </h5>
+      <h5 class="card-title truncate"> <?php echo "$title "; ?> </h5>
       <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
       <p class="card-text truncate">Genre: <?php echo $genre; ?></p>
     </div>
@@ -17,7 +17,25 @@
       <!-- Bezugnahme auf Design-Elemente von [@thelaazyguy, Css Button Hover #2 - Background]. -->
       <div class="button-wrapper">
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-      <a class="btn btn-sm bg-primary uppercase" href="movie-reviews.php?movie_id=<?php echo $movieId; ?>"> <span class="add-review-button">Add a review</span></a>
+        <?php if (!strpos($_SERVER['REQUEST_URI'], 'delete-movie.php') === false){
+          echo "<form method='post'>";
+        } ?>
+        <input type="hidden" name="movie_id" value="<?php echo $movieId ?>">
+      <button  class="btn btn-sm bg-primary uppercase"
+         <?php if (!strpos($_SERVER['REQUEST_URI'], 'index.php') === false){echo "href='movie-reviews.php?movie_id=$movieId'";}
+                     else{echo "name='delete_movie' type='submit'";}
+               ?>> 
+        <span class="add-review-button">
+          <?php if (!strpos($_SERVER['REQUEST_URI'], 'index.php') === false){ echo "Add a review";}
+                else{ echo "Delete this movie";}
+          ?>
+        </span>
+      </button >
+        <?php 
+          if (!strpos($_SERVER['REQUEST_URI'], 'delete-movie.php') === false){
+            echo "</form>";
+          } 
+        ?>
       </div>
     </div>
   </div>

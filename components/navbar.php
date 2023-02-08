@@ -52,6 +52,13 @@
               <span class="sr-only"></span>
             </a>
           </li>
+          <li class="nav-item active ml-auto">
+            <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+            <a class="nav-link border border-light text-right mr-5" href="delete-movie.php">
+              <span>Delete movies</span>
+              <span class="sr-only"></span>
+            </a>
+          </li>
           <?php } ?>
           <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
           <div class="vr mx-3"></div>
