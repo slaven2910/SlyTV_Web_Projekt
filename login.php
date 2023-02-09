@@ -71,7 +71,7 @@
                             </div>
                             <div>
                                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                <p class="mb-0">Don't have an account? <a href="signUp.php" class="fw-bold text-body">Sign Up</a></p>
+                                <p class="mb-5">Don't have an account? <a href="signUp.php" class="fw-bold text-body">Sign Up</a></p>
                             </div>
                         </div>
                     </div>
