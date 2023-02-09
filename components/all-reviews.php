@@ -166,7 +166,6 @@ accessed on January 31st 2023
 https://www.themoviedb.org/t/p/original/5bTWA20cL9LCIGNpde4Epc2Ijzn.jpg (Titanic.jpg)
 accessed on January 31st 2023
  -->
-
 <hr color="white">
 
 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
