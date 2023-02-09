@@ -1,4 +1,5 @@
-/* LEGAL NOTICE
+/*
+LEGAL NOTICE
 
   This project serves as a teaching example or sample solution in the 
   context of teaching, to teach knowledge in software development. 
@@ -17,7 +18,11 @@
   [Apache 2.4 VS17] in connexion with [php 8.1.12].
   [Apache 2.4 VS17] and [php 8.1.12] will not be delivered/distributed 
   as parts of this project. 
-  The project uses elements of [Bootstrap 5.2.3], [Font Awesome 5.15.3], [1].
+
+  The project uses elements of 
+  [Bootstrap 5.2.3], [Font Awesome 5.15.3], 
+  [@thelaazyguy, Css Button Hover #2 - Background] and 
+  [@allenhe, 5 star rating with css and html].
   Furthermore basic functionalities of the operating system
   Microsoft Windows 10 (Version 10.0.19044.2251) were used
   in order to create this project. Especially the functionality 
@@ -27,7 +32,7 @@ LICENSE OF THIS PROJECT
 
   This license bases on [bsd-3] with fundamental modifications:
 
-  Copyright 2022 Slaven Mlinaric, IU University of Applied Sciences, 
+  Copyright 2022 Slaven Mlinaric, Leon Rausch, Yannick Diehl, IU University of Applied Sciences, 
   Darmstädter Landstraße 110, 60598 Frankfurt am Main, Germany
 
   The use of this project is only allowed in the context of 
@@ -69,26 +74,36 @@ REFERENCES
      Martijn Cuppend / Johann-S / Gleb Mazovetskiy (2022): "Bootstrap".
      Version 5.2.3. Bootstrap is released under the MIT license 
      and is copyright 2022 Twitter. Online available at
-     URL: https://getbootstrap.com/, accessed 2022-DECEMBER-06.
+     URL: https://getbootstrap.com/, accessed 2023-FEB-01.
      [Bootstrap v5.2.3 (https://getbootstrap.com/), 
      Copyright 2011-2022 The Bootstrap Authors, 
      Copyright 2011-2022 Twitter, Inc., 
      Licensed under MIT 
      (https://github.com/twbs/bootstrap/blob/main/LICENSE)].
-  [Font Awesome 5.15.3] Font Awesome, Inc. (2022): "Font Awesome".
-     Version 5.15.3. Font Awesome is released under the MIT License.
-     Online available at URL: https://fontawesome.com,
-     accessed 2023-FEB-01.
+  [Font Awesome 5.15.3]  Fonticons, Inc. (2022): "Font Awesome".
+     Version 5.15.3. Online available at
+     URL: https://fontawesome.com, accessed 2023-FEB-01.
      [Font Awesome v5.15.3 (https://fontawesome.com),
-     Copyright 2022 Font Awesome, Inc.,
+     Copyright 2022 Fonticons, Inc.,
      Licensed under MIT (https://fontawesome.com/license/free).]
-  [1] Animated CSS Buttons, The Laazy Guy, https://codepen.io/thelaazyguy/pen/brryVq 
+  [JQuery 3.5.1] OpenJS Foundation and jQuery contributors (2022): "JQuery".
+     Version 3.5.1. slim
+     Online available on the website of jqeury.com at URL: https://code.jquery.com/jquery-3.5.1.slim.min.js,
      accessed 2023-FEB-01.
-     [1 Animated CSS Buttons, The Laazy Guy,
+     [JQuery v3.5.1 (https://code.jquery.com/jquery-3.5.1.slim.min.js),
+     Copyright 2023 OpenJS Foundation and jQuery contributors,
+     Licensed under MIT (https://jquery.org/license).]
+  [@thelaazyguy, Css Button Hover #2 - Background], Author unbekannt(pseudonym: @thelaazyguy) (2017):
+     Online available on the website of https://codepen.io/ at
+     URL: https://codepen.io/thelaazyguy/pen/brryVq 
+     accessed 2023-FEB-01.
+     [@thelaazyguy, Css Button Hover #2 - Background
      Licensed under MIT (https://codepen.io/thelaazyguy/details/brryVq)]
-  [2] Five Star Rating, allenhe, https://codepen.io/hesguru/pen/BaybqXv
+  [@allenhe, 5 star rating with css and html], Author unbekannt(pseudonym: @thelaazyguy) (2020):
+     Online available on the website of https://codepen.io/ at
+     URL: https://codepen.io/hesguru/pen/BaybqXv 
      accessed 2023-FEB-01.
-     [2 Five Star Rating, allenhe,
+     [@allenhe, 5 star rating with css and html
      Licensed under MIT (https://codepen.io/hesguru/details/BaybqXv)]
 
 REMARKS
@@ -110,30 +125,38 @@ REMARKS
   https://codepen.io/hesguru/details/BaybqXv
   accessed on February 1st 2023.
 
-BOOTSTRAP LICENSE
-
-The MIT License (MIT)
-
-Copyright (c) 2011-2022 Twitter, Inc.
-Copyright (c) 2011-2022 The Bootstrap Authors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+IMAGES
+All images are from the same website https://www.themoviedb.org/
+For readability reasons we have renamed the original files 
+in the following the new name of the file is displayed in parentheses after each link
+https://www.themoviedb.org/t/p/original/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg (Avatar.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/yu26pJwGFUyqTJWMWo1mMgBFJ0N.jpg (Forrest-Gump.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/8IB2e4r4oVhHnANbnm7O3Tj6tF8.jpg (Inception.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg (Interstellar.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/lxM6kqilAdpdhqUl2biYp5frUxE.jpg (Jaws.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/z9abTHTUSRVktz9T12sqLJDUwaV.jpg (Pacific-Rim.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/fIE3lAGcZDV1G6XM5KmuWnNsPp1.jpg (Pulp-Fiction.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/eP5NL7ZlGoW9tE9qnCdHpOLH1Ke.jpg (The-Dark-Knight.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/3Tf8vXykYhzHdT0BtsYTp570JGQ.jpg (The-Godfather.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg (The-Lion-King.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg (The-Matrix.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/pVHyB857pFAl9pBgOGzWTChPwlK.jpg (The-Shawshank-Redemption.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg (The-Silence-of-the-Lambs.jpg)
+accessed on January 31st 2023
+https://www.themoviedb.org/t/p/original/5bTWA20cL9LCIGNpde4Epc2Ijzn.jpg (Titanic.jpg)
+accessed on January 31st 2023
   
   */
 
