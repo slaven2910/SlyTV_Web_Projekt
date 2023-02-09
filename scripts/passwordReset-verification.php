@@ -105,6 +105,14 @@ REFERENCES
      accessed 2023-FEB-01.
      [@allenhe, 5 star rating with css and html
      Licensed under MIT (https://codepen.io/hesguru/details/BaybqXv)]
+  [PHP Mailer 6.7.1] Marcus Bointon / Jim Jagielski / Andy Prevost /
+     Brent R. Matzelle (2023): The PHPMailer GitHub project.
+     Copyright 2012 - 2020 Marcus Bointon,
+     Copyright 2010 - 2012 Jim Jagielski,
+     Copyright 2004 - 2009 Andy Prevost.
+     Online available at URL: https://github.com/PHPMailer/PHPMailer, 
+     accessed 2023-JAN-21
+     Licensed under GNU Lesser General Public License. ]
 
 REMARKS
 
@@ -160,6 +168,9 @@ accessed on January 31st 2023
  -->
 <?php
 
+// inspired by "How To Create A Forgotten Password System In PHP | Password Recovery By Email In PHP | PHP Tutorial" from Dani Krossing
+// on Youtube.com available at the URL: https://www.youtube.com/watch?v=wUkKCMEYj9M. last visited on 03.01.2023.
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -212,7 +223,7 @@ if (isset($_POST["eMail"])) {
 
             // would be changed to mail($to, $subject, $message, $header); when on webserver
             // PHPMailer from: https://github.com/PHPMailer/PHPMailer
-            // code from: https://www.codexworld.com/how-to-send-email-from-localhost-in-php/
+            // code inspired by: https://www.codexworld.com/how-to-send-email-from-localhost-in-php/
             $mail = new PHPMailer;
 
             $mail->isSMTP();
