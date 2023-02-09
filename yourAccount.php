@@ -1,9 +1,10 @@
+
 <?php
 session_start();
-
 if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSION["email"])) { ?>
   <!DOCTYPE html>
   <html lang="en">
+
   <?php include('./components/header.php');
   
   $user_name = $_SESSION["username"];
@@ -21,7 +22,8 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
           <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
           <div class="col-lg-3 mb-5">
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-            <div class="d-flex justify-content-center py-4"><img src="./assets/images/user_profile_icon.png" class="img-fluid" alt="profile picture"><br><br><br></div>
+            <div class="d-flex justify-content-center py-4"><img src="./assets/images/user_profile_icon.png" class="img-fluid" 
+              alt="profile picture"><br><br><br></div>
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
             <ul class="list-group">
               <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -30,7 +32,10 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
               <li class="list-group-item" style="color: black;"><?php echo $_SESSION["email"]; ?></li>
             </ul>
             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-            <div class="d-flex justify-content-center py-4"><a class="btn btn-outline-danger w-100" href="./scripts/logout.php">Logout</a></div>
+            <div class="d-flex justify-content-center py-4">
+              <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+              <a class="btn btn-outline-danger w-100" href="./scripts/logout.php">Logout</a>
+            </div>
 
           </div>
           <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
@@ -40,9 +45,9 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
             <hr />
 
             <?php include('./scripts/connect.php');
-                  include 'scripts/review.php';
+                include 'scripts/review.php';
 
-            // Movie comments
+            // selects all comments from the user
             $movieCommentsQuery = 'SELECT public."movie_comments".id as comment_id, public."movie_comments".comment, 
               public."movie_comments".created_at,  public."Movies".title, public."Movies".id as movie_id
               FROM public."movie_comments" FULL OUTER JOIN public."Movies"  ON public."movie_comments".movie_id = public."Movies".id 
@@ -206,13 +211,16 @@ if (isset($_SESSION["user_id"]) && isset($_SESSION["username"]) && isset($_SESSI
         </div>
       </section>
     </div>
-    <?php include('./components/footer.php') ?>
+    <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
+    <div class="fixed-bottom">
+      <?php include './components/footer.php'; ?>
+    </div>
   </body>
   </html>
 
 <?php
 } else {
-  header("Location: login.php");
-  exit();
+    header("Location: login.php");
+    exit();
 }
 ?>

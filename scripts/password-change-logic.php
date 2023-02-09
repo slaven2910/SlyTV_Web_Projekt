@@ -1,13 +1,12 @@
+
 <?php
-// idea from: https://www.youtube.com/watch?v=wUkKCMEYj9M
-
+// inspired by "How To Create A Forgotten Password System In PHP | Password Recovery By Email In PHP | PHP Tutorial" from Dani Krossing
+// on Youtube.com available at the URL: https://www.youtube.com/watch?v=wUkKCMEYj9M. last visited on 03.01.2023.
 if (isset($_POST["selector"]) && isset($_POST["validator"])) {
-
     $selector = $_POST["selector"];
     $validator = $_POST["validator"];
     $pwd = $_POST["password"];
     $pwdRepeat = $_POST["pwd-repeat"];
-
     if (empty($pwd)) {
         header("Location: ../password-change.php?error=new password is empty");
         exit();
@@ -19,15 +18,14 @@ if (isset($_POST["selector"]) && isset($_POST["validator"])) {
     $currentDateTime = date("U");
 
     include 'db-credientials.php';
-
     $connStr = "host=$host port=$port dbname=$db user=$user password=$pw";
     $dbConn = pg_connect($connStr);
-
     $query = "SELECT * FROM public.\"pwdReset\" WHERE selector='$selector' AND expires >= $currentDateTime";
     $queryResult = pg_query($dbConn, $query);
 
     if (pg_num_rows($queryResult) === 1) {
         $row = pg_fetch_assoc($queryResult);
+
         $tokenBinary = hex2bin($validator);
         $checkToken = password_verify($tokenBinary, $row["token"]);
 
@@ -41,7 +39,6 @@ if (isset($_POST["selector"]) && isset($_POST["validator"])) {
                 $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
                 $updatePwd = "UPDATE public.\"Users\" SET password='$hashedPwd' WHERE email='$tokenEmail'";
-
                 pg_query($dbConn, $updatePwd);
 
                 $deleteToken = "DELETE FROM public.\"pwdReset\" WHERE email='$tokenEmail'";
@@ -58,7 +55,7 @@ if (isset($_POST["selector"]) && isset($_POST["validator"])) {
             exit();
         }
     } else {
-        header("Location: ../passwordReset.php?error=token expired");
+        header("Location: ../passwordReset.php?error=token expired! Try sending another request");
         exit();
     }
 }

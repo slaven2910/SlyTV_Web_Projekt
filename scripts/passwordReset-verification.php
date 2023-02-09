@@ -1,14 +1,14 @@
-<?php
 
+<?php
+// inspired by "How To Create A Forgotten Password System In PHP | Password Recovery By Email In PHP | PHP Tutorial" from Dani Krossing
+// on Youtube.com available at the URL: https://www.youtube.com/watch?v=wUkKCMEYj9M. last visited on 03.01.2023.
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
 require '../PHPMailer/Exception.php';
 require '../PHPMailer/PHPMailer.php';
 require '../PHPMailer/SMTP.php';
 require_once '../scripts/connect.php';
-
 if (isset($_POST["eMail"])) {
     function validate($data)
     {
@@ -35,7 +35,6 @@ if (isset($_POST["eMail"])) {
             // token to pinpoint other token of the user for security reasons
             $token = random_bytes(32);
 
-            // TODO: example url to get to the password reset page while Apache server is running
             $url = "http://localhost/SlyTV_Web_Projekt/password-change.php?selector=$selector&validator=" . bin2hex($token);
 
             // datetime right now + 450 seconds (20 min)
@@ -51,9 +50,9 @@ if (isset($_POST["eMail"])) {
                 Values ('$eMail', '$selector', '$hashedToken', '$expires')";
             pg_query($dbConn, $insert);
 
-            // change to mail($to, $subject, $message, $header); when on webserver
+            // would be changed to mail($to, $subject, $message, $header); when on webserver
             // PHPMailer from: https://github.com/PHPMailer/PHPMailer
-            // code from: https://www.codexworld.com/how-to-send-email-from-localhost-in-php/
+            // code inspired by: https://www.codexworld.com/how-to-send-email-from-localhost-in-php/
             $mail = new PHPMailer;
 
             $mail->isSMTP();

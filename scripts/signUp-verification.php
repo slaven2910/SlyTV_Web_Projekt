@@ -1,21 +1,12 @@
+
 <?php
-include 'db-credientials.php';
+include 'connect.php';
 session_start();
-
-// Datenbankverbindung aufbauen
-
-$connStr = "host=$host port=$port dbname=$db user=$user password=$pw";
-
-$dbConn = pg_connect($connStr);
-
-if (!$dbConn) {
-  echo "Ein Fehler ist aufgetreten.\n";
-  exit;
-}
-
-
+// inspried by "Complete User Registration system using PHP and MySQL database" from Coding with Elias on YouTube.com
+// available at the URL: https://www.youtube.com/watch?v=QxZxHUf7c_0. last visited on 26.12.2023.
 if (isset($_POST["username"]) && isset($_POST["eMail"]) && isset($_POST["password"]) && isset($_POST["pwd-repeat"])) {
 
+    // removes unnecessary data and prevents cross-site scripting / character escape
     function validate($data)
     {
         $data = trim($data);
@@ -28,7 +19,6 @@ if (isset($_POST["username"]) && isset($_POST["eMail"]) && isset($_POST["passwor
     $eMail = validate($_POST["eMail"]);
     $pwd = validate($_POST["password"]);
     $pwdRepeat = validate($_POST["pwd-repeat"]);
-    // TODO: hier morgen weitermachen
     $termscheck = $_POST["terms-checkbox"];
 
     $typedInData = "uname=" . $uname . "&eMail=" . $eMail;

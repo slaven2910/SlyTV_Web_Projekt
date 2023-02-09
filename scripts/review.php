@@ -1,8 +1,16 @@
+
 <?php
 include 'connect.php';
 
+function validate($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    $_SESSION["validation_activated"] = true;
+    return $data;
+}
 // Get comments from the database
-
 function getComments($dbConn, $movie_id) {
     try {
         $commentsQuery = "SELECT u.username, mc.comment, mc.created_at, mc.id, mc.user_id
@@ -18,20 +26,19 @@ function getComments($dbConn, $movie_id) {
   }
   
   // Get a movie rating 
-  
   function getMovieRatingAvg($dbConn, $movie_id){
     try{
       $ratingQuery = "SELECT AVG(rating) AS avg_rating FROM public.\"movie_ratings\" WHERE movie_id = $movie_id";
       $queryResult = pg_query($dbConn, $ratingQuery);
       $rating = pg_fetch_assoc($queryResult);
       return $rating;
+      
     } catch(Exception $e) {
       echo $e->getMessage();
     }
   }
   
   // Get movie rating from logged in user for the selected movie
-  
   function getUserRatingForMovie($dbConn, $movieId, $user_id) {
     try{
       $query = "SELECT * FROM public.\"movie_ratings\" WHERE movie_id='$movieId' AND user_id='$user_id'";
@@ -40,20 +47,17 @@ function getComments($dbConn, $movie_id) {
     } catch(Exception $e) {
       echo $e->getMessage();
     }
-    
   }
-  
+
   //post for rating and comment
-  
   if (isset($_POST['rate']) && isset($_POST['movie_id']) && isset($_POST['user_id'])) {
+    
     $rate = $_POST['rate'];
     $movie_id = $_POST['movie_id'];
     $user_id = $_POST['user_id'];
-    $existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id);
-  
-    
+    $existingRating = getUserRatingForMovie($dbConn, $movie_id, $user_id); 
     if (isset($_POST['comment'])) {
-        $comment = $_POST['comment'];
+        $comment = validate($_POST['comment']);
         if(!empty($comment)){
           $insertComment = "INSERT INTO public.\"movie_comments\"(comment, movie_id, user_id, created_at) VALUES('$comment', '$movie_id', '$user_id', now())";
           $insertCommentResult = pg_query($dbConn, $insertComment);
@@ -66,8 +70,7 @@ function getComments($dbConn, $movie_id) {
           ";
         }
     }
-    
-  
+
     if (empty($existingRating)) {
         $insert = "INSERT INTO public.\"movie_ratings\"(rating, movie_id, user_id) VALUES('$rate', '$movie_id', '$user_id')";
         $insertResult = pg_query($dbConn, $insert);
@@ -98,9 +101,8 @@ function getComments($dbConn, $movie_id) {
         </div>
         ";
   }
-  
+
   //delete a comment
-  
   function deleteComment($dbConn, $comment_id, $user_id) {
     try{
       $deleteQuery = "DELETE FROM public.\"movie_comments\" WHERE id = '$comment_id' AND user_id = '$user_id'";
@@ -127,7 +129,6 @@ function getComments($dbConn, $movie_id) {
   }
   
   // Update comment
-  
   function updateComment($dbConn, $comment_id, $newComment, $user_id) {
     try{
       $updateQuery = "UPDATE public.\"movie_comments\" SET comment='$newComment', created_at= now() WHERE id = $comment_id AND user_id = '$user_id'";
@@ -140,7 +141,7 @@ function getComments($dbConn, $movie_id) {
   
   if(isset($_POST["update"])) {
     $comment_id = intval($_POST['comment_id']);
-    $new_comment = $_POST['new_comment_input'];
+    $new_comment = validate($_POST['new_comment_input']);
     $user_id = $_SESSION['user_id'];
     $result = updateComment($dbConn, $comment_id, $new_comment, $user_id);
     if ($result) {

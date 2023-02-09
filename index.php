@@ -1,12 +1,10 @@
+
 <?php 
 include('./scripts/movie.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-        
     <?php include('./components/header.php'); ?>
-
     <body class="site-background">
         <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
         <div class="container-fluid">
@@ -15,7 +13,6 @@ include('./scripts/movie.php');
             <section class="content-wrapper">
                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                 <div class="row mb-4 py-5">
-
                     <?php
                     if (isset($_POST['search_term'])) {
                         $search_term = $_POST['search_term'];
@@ -28,7 +25,6 @@ include('./scripts/movie.php');
                                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                             </div>
                             ";
-
                             $movies = getMovies($dbConn);
                             foreach($movies as $movie){
                                 $movieId = $movie['id'];
@@ -63,11 +59,9 @@ include('./scripts/movie.php');
                             }
                     }
                     ?>
-
                 </div>
             </section>
         </div>
         <?php include './components/footer.php'; ?>
-
     </body>
 </html>

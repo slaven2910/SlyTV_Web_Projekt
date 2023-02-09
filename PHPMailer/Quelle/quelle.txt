@@ -1,1 +1,0 @@
-Quelle: https://github.com/PHPMailer/PHPMailer

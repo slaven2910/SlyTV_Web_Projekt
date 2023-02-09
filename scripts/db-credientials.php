@@ -1,3 +1,4 @@
+
 <?php
 //DB-Credientials 
 $host = "localhost";
