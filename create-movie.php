@@ -55,7 +55,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] != true) {
                             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                             <div class="form-outline form-white mb-4">
                                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                <input type="month" name="publishingyear" value="<?php echo $_GET["publishingyear"]; ?>" class="form-control form-control-lg "/>
+                                <input type="number" name="publishingyear" min="1900" max="2023" value="<?php echo $_GET["publishingyear"]; ?>" class="form-control form-control-lg "/>
                                 <label>Publishing Year</label>
                             </div>
                             <?php } else { ?>
@@ -63,7 +63,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] != true) {
                             <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
                             <div class="form-outline form-white mb-4">
                                 <!-- Bezugnahme auf Design-Elemente von [Bootstrap 5.2.3]. -->
-                                <input type="month" name="publishingyear" class="form-control form-control-lg "/>
+                                <input type="number" name="publishingyear" min="1900" max="2023" class="form-control form-control-lg "/>
                                 <label>Publishing Year</label>
                             </div>
                             <?php } ?>
