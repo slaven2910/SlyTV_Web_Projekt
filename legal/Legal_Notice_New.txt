@@ -18,7 +18,10 @@ LEGAL NOTICE
   [Apache 2.4 VS17] and [php 8.1.12] will not be delivered/distributed 
   as parts of this project. 
 
-  The project uses elements of [Bootstrap 5.2.3], [Font Awesome 5.15.3], [Animated CSS Buttons] and [Five Star Rating].
+  The project uses elements of 
+  [Bootstrap 5.2.3], [Font Awesome 5.15.3], 
+  [@thelaazyguy, Css Button Hover #2 - Background] and 
+  [@allenhe, 5 star rating with css and html].
   Furthermore basic functionalities of the operating system
   Microsoft Windows 10 (Version 10.0.19044.2251) were used
   in order to create this project. Especially the functionality 
@@ -95,7 +98,7 @@ REFERENCES
      accessed 2023-FEB-01.
      [@thelaazyguy, Css Button Hover #2 - Background
      Licensed under MIT (https://codepen.io/thelaazyguy/details/brryVq)]
-  [@allenhe, 5 star rating with css and html], Author unbekannt(pseudonym: @thelaazyguy)
+  [@allenhe, 5 star rating with css and html], Author unbekannt(pseudonym: @thelaazyguy) (2020):
      Online available on the website of https://codepen.io/ at
      URL: https://codepen.io/hesguru/pen/BaybqXv 
      accessed 2023-FEB-01.
