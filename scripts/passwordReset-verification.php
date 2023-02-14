@@ -60,11 +60,12 @@ if (isset($_POST["eMail"])) {
             $mail->Host = 'ssl://smtp.gmail.com';
             $mail->Port = 465;
             $mail->SMTPAuth = true;
-            $mail->Username = 'slytv.noreply@gmail.com';
-            $mail->Password = 'fehfuutjqupjcorw';
-
-            $mail->setFrom('slytv.noreply@gmail.com', 'SlyTV no-reply');
-            $mail->addReplyTo('slytv.noreply@gmail.com', 'SlyTV no-reply');
+            
+            // had to be deleted due to scam attempts by people from Japan and Morocco 
+            $mail->Username = 'deleted ;)';
+            $mail->Password = 'jasdfjesdjejis';
+            $mail->setFrom('StopScammingPeople@no-life.fy', 'deletedAlready');
+            $mail->addReplyTo('StopScammingPeople@no-life.fy', 'deletedAlready');
             $mail->addAddress($eMail);
 
             $mail->isHTML(true);
